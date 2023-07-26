@@ -14,19 +14,19 @@ const Services = () => {
       </div>
       <div className="container mx-auto px-4">
         <div className="text-center my-4">
-          <h2 className="text-2xl font-poppins font-semibold">
+          <h2 className="text-xl md:text-2xl font-poppins font-semibold">
             You don’t just need a website, you need a{" "}
             <span className="text-atlassianBlue">high-performing</span> website.
           </h2>
         </div>
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-10 my-6">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-6 lg:gap-10 my-6">
           <div className="flex flex-col items-center justify-center text-center bg-cardViolet pt-6 rounded-sm drop-shadow-lg w-full md:w-2/5">
             <div className="px-2 py-4 flex flex-col items-center gap-3 text-center justify-center">
               <div className="w-84">
                 <img src={WebDevImage} alt="Image" className="w-full h-full" />
               </div>
               <div>
-                <h1 className="text-xl font-bold font-poppins">
+                <h1 className="text-xl font-bold font-poppins text-atlassianBlue">
                   E2E Web Development
                 </h1>
               </div>
@@ -45,7 +45,7 @@ const Services = () => {
                 <img src={MentorImage} alt="Image" className="w-full h-full" />
               </div>
               <div>
-                <h1 className="text-xl font-bold font-poppins">
+                <h1 className="text-xl font-bold font-poppins text-atlassianBlue">
                   Content Creation
                 </h1>
               </div>
