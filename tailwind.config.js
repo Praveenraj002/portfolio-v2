@@ -17,6 +17,8 @@ export default {
         deepBlue: "hsl(216, 100%, 35%)",
         deepGray: "hsl(218, 25%, 35%)",
         lightGray: "hsl(220, 10%, 89%)",
+        cardViolet: "hsl(251, 89%, 96%)",
+        cardBlue: "#D4FAFF",
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],

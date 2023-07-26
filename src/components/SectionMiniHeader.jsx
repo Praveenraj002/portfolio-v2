@@ -4,7 +4,7 @@ const SectionMiniHeader = (props) => {
   return (
     <>
       <div className="container mx-auto px-4">
-        <div className="font-inter text-sm lg:text-base text-atlassianBlue font-extrabold mt-2 md:mt-3">
+        <div className="font-inter text-sm lg:text-base text-atlassianBlue font-extrabold my-2 md:my-3">
           {props.children}
         </div>
       </div>
