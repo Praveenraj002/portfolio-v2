@@ -53,6 +53,12 @@ const NavbarLg = () => {
           </a>
           <div className="flex items-center gap-5 text-deepGray font-normal text-base">
             <a
+              href="#home"
+              className="px-3 py-1 hover:bg-lightGray rounded-sm transition duration-300 ease-in-out"
+            >
+              Home
+            </a>
+            <a
               href="#about"
               className="px-3 py-1 hover:bg-lightGray rounded-sm transition duration-300 ease-in-out"
             >
