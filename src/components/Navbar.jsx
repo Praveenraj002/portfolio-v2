@@ -1,4 +1,18 @@
+import MobileMenu from "./MobileMenu";
+import { useState } from "react";
+
 const NavbarSm = () => {
+  const [open, setOpen] = useState(false);
+
+  const HandleMenuButton = () => {
+    setOpen(!open);
+    return (
+      <>
+        <MobileMenu />
+      </>
+    );
+  };
+
   return (
     <>
       <div className="container mx-auto px-4 py-3">
@@ -11,6 +25,7 @@ const NavbarSm = () => {
           </a>
           <div>
             <button
+              onClick={HandleMenuButton}
               id="menu-btn"
               className="z-30 block lg:hidden focus:outline-none hamburger"
             >
@@ -71,11 +86,14 @@ const NavbarLg = () => {
 const Navbar = () => {
   return (
     <>
-      <nav className="top-0 z-50" id="navbar">
-        <div className="lg:hidden">
+      <nav
+        className="top-0 z-50 fixed bg-white w-full drop-shadow-xl"
+        id="navbar"
+      >
+        <div className="lg:hidden ">
           <NavbarSm />
         </div>
-        <div className="hidden lg:block">
+        <div className="hidden lg:block ">
           <NavbarLg />
         </div>
       </nav>

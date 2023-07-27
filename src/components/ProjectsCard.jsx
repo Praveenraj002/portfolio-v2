@@ -9,12 +9,16 @@ const ProjectsCard = (props) => {
           </h1>
           <p>{props.description}</p>
           <div className="w-full my-6 md:my-8 flex flex-col gap-4">
-            <button className="bg-atlassianBlue w-full py-2 border-2 border-atlassianBlue text-white font-poppins rounded-md  hover:bg-atlassianLightBlue hover:text-atlassianBlue font-semibold transition duration-300">
+            <a
+            href={props.demo}
+            className="bg-atlassianBlue w-full py-2 border-2 border-atlassianBlue text-white font-poppins rounded-md  hover:bg-atlassianLightBlue hover:text-atlassianBlue font-semibold transition duration-300">
               Demo
-            </button>
-            <button className="bg-atlassianBlue w-full py-2 border-2 border-atlassianBlue text-white font-poppins rounded-md hover:bg-atlassianLightBlue hover:text-atlassianBlue font-semibold transition duration-300">
+            </a>
+            <a
+            href={props.repo}
+            className="bg-atlassianBlue w-full py-2 border-2 border-atlassianBlue text-white font-poppins rounded-md hover:bg-atlassianLightBlue hover:text-atlassianBlue font-semibold transition duration-300">
               GitHub Repository
-            </button>
+            </a>
           </div>
         </div>
       </div>

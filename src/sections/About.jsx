@@ -14,7 +14,7 @@ const About = () => {
       </div>
       <div className="container mx-auto px-4">
         <div className="flex flex-col gap-8 lg:gap-12 lg:flex-row items-center justify-center my-8">
-          <div className="w-1/2 lg:w-60">
+          <div className="w-1/2 lg:w-60" data-aos="zoom-in">
             <img
               src={PraveenImage}
               alt="Image"
@@ -32,8 +32,13 @@ const About = () => {
             <p>
               Fast-forward to today, and I’ve had the privilege of working at 2
               startup E-learning companies namely{" "}
-              <span className="text-atlassianBlue">Techsnap</span> where i
-              worked as a Front end development Intern and <span className="text-atlassianBlue">DevTown</span>{" "}
+              <a href="https://www.techsnap.in/" className="text-atlassianBlue">
+                Techsnap
+              </a>{" "}
+              where i worked as a Front end development Intern and{" "}
+              <a href="https://www.devtown.in/" className="text-atlassianBlue">
+                DevTown
+              </a>{" "}
               where i worked as a web development Intern and where i started my
               career as a web developer.
             </p>

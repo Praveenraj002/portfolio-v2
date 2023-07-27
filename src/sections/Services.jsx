@@ -3,7 +3,7 @@ import SectionHeader from "../components/SectionHeader";
 
 // Images
 import WebDevImage from "../assets/Images/web-development.png";
-import MentorImage from "../assets/Images/mentor-image.png"
+import MentorImage from "../assets/Images/mentor-image.png";
 
 const Services = () => {
   return (
@@ -20,7 +20,10 @@ const Services = () => {
           </h2>
         </div>
         <div className="flex flex-col md:flex-row items-center justify-center gap-6 lg:gap-10 my-6">
-          <div className="flex flex-col items-center justify-center text-center bg-cardViolet pt-6 rounded-sm drop-shadow-lg w-full md:w-2/5">
+          <div
+            className="flex flex-col items-center justify-center text-center bg-cardViolet pt-6 rounded-sm drop-shadow-lg w-full md:w-2/5"
+            data-aos="zoom-out-right"
+          >
             <div className="px-2 py-4 flex flex-col items-center gap-3 text-center justify-center">
               <div className="w-84">
                 <img src={WebDevImage} alt="Image" className="w-full h-full" />
@@ -39,14 +42,17 @@ const Services = () => {
             </div>
           </div>
 
-          <div className="flex flex-col items-center justify-center text-center bg-cardBlue  rounded-sm drop-shadow-lg w-full md:w-2/5">
+          <div
+            className="flex flex-col items-center justify-center text-center bg-cardBlue  rounded-sm drop-shadow-lg w-full md:w-2/5"
+            data-aos="zoom-out-left"
+          >
             <div className="px-2 py-4 flex flex-col items-center gap-3 text-center justify-center">
               <div className="w-84">
                 <img src={MentorImage} alt="Image" className="w-full h-full" />
               </div>
               <div>
                 <h1 className="text-xl font-bold font-poppins text-atlassianBlue">
-                  Content Creation
+                  Educational Content Creation
                 </h1>
               </div>
               <div>
