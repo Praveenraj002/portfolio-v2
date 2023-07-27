@@ -1,31 +1,16 @@
-import MobileMenu from "./MobileMenu";
-import { useState } from "react";
-
 const NavbarSm = () => {
-  const [open, setOpen] = useState(false);
-
-  const HandleMenuButton = () => {
-    setOpen(!open);
-    return (
-      <>
-        <MobileMenu />
-      </>
-    );
-  };
-
   return (
     <>
-      <div className="container mx-auto px-4 py-3">
-        <div className="flex items-center justify-between">
+      <div className="container mx-auto px-4 py-3 m-0">
+        <div className="flex items-center justify-center">
           <a
             href="#home"
-            className="font-poppins text-xl font-bold text-deepBlue cursor-pointer"
+            className="font-poppins text-xl font-bold text-center text-deepBlue cursor-pointer"
           >
             Praveen Raj
           </a>
-          <div>
+          {/* <div>
             <button
-              onClick={HandleMenuButton}
               id="menu-btn"
               className="z-30 block lg:hidden focus:outline-none hamburger"
             >
@@ -33,7 +18,7 @@ const NavbarSm = () => {
               <span className="hamburger-middle"></span>
               <span className="hamburger-bottom"></span>
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
     </>
@@ -93,7 +78,7 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className="top-0 z-50 fixed bg-white w-full drop-shadow-xl"
+        className="top-0 z-50 fixed w-screen bg-white drop-shadow-xl"
         id="navbar"
       >
         <div className="lg:hidden ">

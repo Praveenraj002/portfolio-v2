@@ -14,7 +14,7 @@ const HeroSm = () => {
             <img src={BgImageSm} alt="Image" className="w-full h-full" />
           </div>
 
-          <div className="absolute inset-0 flex flex-col gap-3 items-center justify-center z-10 text-center text-white font-poppins container mx-auto px-2">
+          <div className="absolute inset-0 flex flex-col gap-3 items-center justify-center z-10 text-center text-white font-poppins container mx-auto px-2 m-0">
             <h2 className="moveInBottom text-xl font-semibold">
               Hello there, this is Praveen Raj.
             </h2>
@@ -27,8 +27,12 @@ const HeroSm = () => {
               technical, problem-solving, and interpersonal skills.
             </p>
             <div className="moveInTop flex gap-6 items-center justify-center">
-              <BlueButton>My Resume</BlueButton>
-              <WhiteButton>Contact me</WhiteButton>
+              <a href="https://drive.google.com/file/d/1p9z6XFseyHCHJe9w1hk4JJ5sXunt98EU/view?usp=sharing">
+                <BlueButton>My Resume</BlueButton>
+              </a>
+              <a href="#contact">
+                <WhiteButton>Contact me</WhiteButton>
+              </a>
             </div>
           </div>
         </div>

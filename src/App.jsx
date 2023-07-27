@@ -1,4 +1,4 @@
-import Navbar from "./components/NavBar";
+import Navbar from "./components/Navbar";
 import About from "./sections/About";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
@@ -8,11 +8,9 @@ import Services from "./sections/Services";
 import TechStacks from "./sections/TechStacks";
 import Workflow from "./sections/Workflow";
 
-
-
 function App() {
   return (
-    <div>
+    <>
       <Navbar />
       <Hero />
       <About />
@@ -22,7 +20,7 @@ function App() {
       <Projects />
       <Contact />
       <Footer />
-    </div>
+    </>
   );
 }
 
