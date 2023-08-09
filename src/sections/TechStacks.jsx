@@ -16,9 +16,9 @@ import {
   SiJavascript,
   SiTypescript,
   SiTailwindcss,
-  SiNodedotjs,
-  SiAmazonaws,
-  SiMongodb,
+  // SiNodedotjs,
+  // SiAmazonaws,
+  // SiMongodb,
   SiRedux,
 } from "react-icons/si";
 
@@ -71,7 +71,7 @@ const TechStacks = () => {
             icon={<SiRedux className="text-violet-500" />}
             title="Redux"
           />
-          <TechStacksPill
+          {/* <TechStacksPill
             icon={<SiNodedotjs className="text-green-600" />}
             title="Node.js"
           />
@@ -82,7 +82,7 @@ const TechStacks = () => {
           <TechStacksPill
             icon={<SiAmazonaws className="text-blue-900" />}
             title="AWS"
-          />
+          /> */}
         </div>
       </div>
     </>
