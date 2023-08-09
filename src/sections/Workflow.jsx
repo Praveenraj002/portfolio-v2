@@ -2,7 +2,7 @@ import SectionMiniHeader from "../components/SectionMiniHeader";
 import SectionHeader from "../components/SectionHeader";
 
 // Images
-import WorkflowImage from "../assets/Images/WorkflowImage.png";
+// import WorkflowImage from "../assets/Images/WorkflowImage.png";
 import WorkflowCard from "../components/WorkflowCard";
 
 const Workflow = () => {
@@ -14,13 +14,13 @@ const Workflow = () => {
       </div>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-center text-center">
-          <div className="w-full lg:hidden lg:w-1/2 flex justify-center items-center text-center">
+          {/* <div className="w-full lg:hidden lg:w-1/2 flex justify-center items-center text-center">
             <img
               src={WorkflowImage}
               alt="image"
               className="w-full h-full items-center justify-center"
             />
-          </div>
+          </div> */}
         </div>
         <div className="flex flex-col md:flex-row flex-wrap items-center justify-center gap-8 md:gap-10">
           <WorkflowCard
