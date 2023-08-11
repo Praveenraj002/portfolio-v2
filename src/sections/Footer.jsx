@@ -11,7 +11,7 @@ const Footer = () => {
             <div className="w-16 md:w-20">
               <img src={Logo} alt="Image" className="w-full h-full" />
             </div>
-            <h1 className="text-white font-poppins font-semibold text-base">
+            <h1 className="text-white font-poppins font-semibold text-sm md:text-base">
               reachpraveenrajsl@gmail.com
             </h1>
             <h1 className="text-white font-poppins font-semibold text-base md:text-lg">
