@@ -19,6 +19,7 @@ export default {
         lightGray: "hsl(220, 10%, 89%)",
         cardViolet: "hsl(251, 89%, 96%)",
         cardBlue: "#D4FAFF",
+        chakra: "#4CC8C3",
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],

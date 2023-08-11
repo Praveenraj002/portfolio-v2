@@ -16,10 +16,11 @@ import {
   SiJavascript,
   SiTypescript,
   SiTailwindcss,
+  SiChakraui,
+  SiRedux,
   // SiNodedotjs,
   // SiAmazonaws,
   // SiMongodb,
-  SiRedux,
 } from "react-icons/si";
 
 const TechStacks = () => {
@@ -70,6 +71,10 @@ const TechStacks = () => {
           <TechStacksPill
             icon={<SiRedux className="text-violet-500" />}
             title="Redux"
+          />
+          <TechStacksPill
+            icon={<SiChakraui className="text-chakra" />}
+            title="Chakra UI"
           />
           {/* <TechStacksPill
             icon={<SiNodedotjs className="text-green-600" />}
