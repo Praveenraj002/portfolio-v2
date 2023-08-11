@@ -20,6 +20,7 @@ export default {
         cardViolet: "hsl(251, 89%, 96%)",
         cardBlue: "#D4FAFF",
         chakra: "#4CC8C3",
+        tailwind: "#38BDF8",
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],

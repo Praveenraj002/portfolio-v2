@@ -69,7 +69,7 @@ const TechStacks = () => {
             title="Redux"
           />
           <TechStacksPill
-            icon={<SiTailwindcss className="text-atlassianBlue" />}
+            icon={<SiTailwindcss className="text-tailwind" />}
             title="Tailwind CSS"
           />
           <TechStacksPill
