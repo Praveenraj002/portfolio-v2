@@ -41,28 +41,24 @@ const TechStacks = () => {
             title="CSS"
           />
           <TechStacksPill
-            icon={<SiJavascript className="text-yellow-400" />}
-            title="JavaScript"
+            icon={<FaSass className="text-pink-700" />}
+            title="Sass"
           />
           <TechStacksPill
-            icon={<SiTypescript className="text-blue-600" />}
-            title="TypeScript"
+            icon={<SiJavascript className="text-yellow-400" />}
+            title="JavaScript"
           />
           <TechStacksPill
             icon={<FaBootstrap className="text-violet-800" />}
             title="Bootstrap"
           />
           <TechStacksPill
-            icon={<FaSass className="text-pink-700" />}
-            title="Sass"
+            icon={<SiTypescript className="text-blue-600" />}
+            title="TypeScript"
           />
           <TechStacksPill
             icon={<FaGit className="text-orange-500" />}
             title="Git/GitHub"
-          />
-          <TechStacksPill
-            icon={<SiTailwindcss className="text-atlassianBlue" />}
-            title="Tailwind CSS"
           />
           <TechStacksPill
             icon={<FaReact className="text-blue-500" />}
@@ -71,6 +67,10 @@ const TechStacks = () => {
           <TechStacksPill
             icon={<SiRedux className="text-violet-500" />}
             title="Redux"
+          />
+          <TechStacksPill
+            icon={<SiTailwindcss className="text-atlassianBlue" />}
+            title="Tailwind CSS"
           />
           <TechStacksPill
             icon={<SiChakraui className="text-chakra" />}
