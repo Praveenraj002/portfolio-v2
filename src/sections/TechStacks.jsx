@@ -79,8 +79,8 @@ const TechStacks = () => {
           {/* <TechStacksPill
             icon={<SiNodedotjs className="text-green-600" />}
             title="Node.js"
-          />
-          <TechStacksPill
+          /> */}
+          {/*<TechStacksPill
             icon={<SiMongodb className="text-green-700" />}
             title="Mongo DB"
           />

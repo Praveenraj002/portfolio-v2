@@ -2,7 +2,8 @@ import SectionMiniHeader from "../components/SectionMiniHeader";
 import SectionHeader from "../components/SectionHeader";
 // import { Link } from "react-router-dom";
 
-import { FaLinkedinIn, FaInstagram, FaTwitter, FaGithub } from "react-icons/fa";
+import { FaLinkedinIn, FaInstagram, FaGithub } from "react-icons/fa";
+import { RiTwitterXFill } from "react-icons/ri";
 
 const Contact = () => {
   return (
@@ -47,7 +48,8 @@ const Contact = () => {
             href="https://twitter.com/rajpraveen002"
             className="border-2 border-atlassianBlue rounded-full p-2 hover:bg-atlassianBlue hover:text-white cursor-pointer drop-shadow-md transition duration-300 ease-in-out"
           >
-            <FaTwitter />
+            {/* <FaTwitter /> */}
+            <RiTwitterXFill />
           </a>
           <a
             href="https://github.com/Praveenraj002"
