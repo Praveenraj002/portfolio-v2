@@ -7,7 +7,10 @@ const TechStacksPill = (props) => {
         data-aos="fade-up-right"
       >
         <div className="text-2xl text-atlassianBlue">{props.icon}</div>
-        <div className="font-semibold text-base">{props.title}</div>
+        <div className="font-semibold text-base">
+          {props.title}{" "}
+          <span className="text-red-600">{props.current && "*"}</span>
+        </div>
       </div>
     </>
   );

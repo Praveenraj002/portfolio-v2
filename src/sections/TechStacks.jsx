@@ -8,7 +8,7 @@ import {
   FaHtml5,
   FaCss3Alt,
   FaBootstrap,
-  FaSass,
+  // FaSass,
   FaGit,
   FaReact,
 } from "react-icons/fa";
@@ -16,8 +16,9 @@ import {
   SiJavascript,
   SiTypescript,
   SiTailwindcss,
-  SiChakraui,
+  // SiChakraui,
   SiRedux,
+  SiMicrosoftsqlserver,
   // SiNodedotjs,
   // SiAmazonaws,
   // SiMongodb,
@@ -40,10 +41,10 @@ const TechStacks = () => {
             icon={<FaCss3Alt className="text-blue-700" />}
             title="CSS"
           />
-          <TechStacksPill
+          {/* <TechStacksPill
             icon={<FaSass className="text-pink-700" />}
             title="Sass"
-          />
+          /> */}
           <TechStacksPill
             icon={<SiJavascript className="text-yellow-400" />}
             title="JavaScript"
@@ -55,6 +56,7 @@ const TechStacks = () => {
           <TechStacksPill
             icon={<SiTypescript className="text-blue-600" />}
             title="TypeScript"
+            current
           />
           <TechStacksPill
             icon={<FaGit className="text-orange-500" />}
@@ -67,15 +69,21 @@ const TechStacks = () => {
           <TechStacksPill
             icon={<SiRedux className="text-violet-500" />}
             title="Redux"
+            current
           />
           <TechStacksPill
             icon={<SiTailwindcss className="text-tailwind" />}
             title="Tailwind CSS"
           />
           <TechStacksPill
+            icon={<SiMicrosoftsqlserver className="text-red-500" />}
+            title="MSSQL Server 2022"
+            current
+          />
+          {/* <TechStacksPill
             icon={<SiChakraui className="text-chakra" />}
             title="Chakra UI"
-          />
+          /> */}
           {/* <TechStacksPill
             icon={<SiNodedotjs className="text-green-600" />}
             title="Node.js"
