@@ -77,7 +77,7 @@ const TechStacks = () => {
           />
           <TechStacksPill
             icon={<SiMicrosoftsqlserver className="text-red-500" />}
-            title="MSSQL Server 2022"
+            title="MS SQL Server 2022"
             current
           />
           {/* <TechStacksPill

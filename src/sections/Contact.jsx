@@ -4,6 +4,7 @@ import SectionHeader from "../components/SectionHeader";
 
 import { FaLinkedinIn, FaInstagram, FaGithub } from "react-icons/fa";
 import { RiTwitterXFill } from "react-icons/ri";
+// import { GoDotFill } from "react-icons/go";
 
 const Contact = () => {
   return (
@@ -16,15 +17,16 @@ const Contact = () => {
               Lets get <span className="text-atlassianBlue">Started!</span>
             </SectionHeader>
           </div>
-          <div className="text-center my-4">
+          <div className="text-center my-4 ">
             <h2
-              className="relative text-sm md:text-lg font-poppins font-semibold text-white bg-red-600 rounded-md py-2 px-4"
+              className="relative text-sm md:text-lg font-poppins font-semibold text-green-600 bg-green-300 rounded-md py-2 px-4 flex flex-row items-center"
               data-aos="flip-up"
             >
-              I&apos;m currently looking for any opportunities, my inbox is
-              always open. Whether you have a question or just want to say hi or
-              want to hire me, feel free to contact me. I’ll try my best to get
-              back to you!
+              Employment Status:{" "}
+              {/* <span>
+                <GoDotFill />
+              </span> */}
+              Available For work
             </h2>
           </div>
         </div>
