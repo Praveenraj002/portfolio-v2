@@ -6,10 +6,10 @@ const Projects = () => {
       <div className="bg-atlassianBlue my-10 md:my-12">
         <div className="mt-12 md:mt-2" id="services">
           <div className="container mx-auto px-4 md:px-2 pt-4" id="projects">
-            <div className="font-inter text-sm lg:text-base text-black font-extrabold my-2 md:my-3">
+            <div className="font-inter text-center text-sm lg:text-base text-black font-extrabold my-2 md:my-3">
               SHOWCASE
             </div>
-            <div className="font-poppins text-xl lg:text-2xl text-white font-bold">
+            <div className="font-poppins text-center text-xl lg:text-2xl text-white font-bold">
               Side Projects
             </div>
             <div
@@ -36,7 +36,7 @@ const Projects = () => {
               />
             </div>
             <div
-              className="flex flex-col md:flex-row gap-6 pb-12 items-center justify-center"
+              className="flex flex-col md:flex-row gap-6 pt-2 pb-12 items-center justify-center"
               data-aos="zoom-in-left"
             >
               <ProjectsCard

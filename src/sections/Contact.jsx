@@ -14,12 +14,16 @@ const Contact = () => {
           <div className="mt-8 md:mt-10" id="contact">
             <SectionMiniHeader>CONTACT</SectionMiniHeader>
             <SectionHeader>
-              Lets get <span className="text-atlassianBlue">Started!</span>
+              Let&apos;s <span className="text-atlassianBlue">Connect</span>
             </SectionHeader>
           </div>
-          <div className="text-center my-4 ">
+          <div className="text-center my-2 ">
+            <p className="mb-3">
+              I&apos;m excited to connect with others to chat about projects and
+              ideas.
+            </p>
             <h2
-              className="relative text-sm md:text-lg font-poppins font-semibold text-green-600 bg-green-300 rounded-md py-2 px-4 flex flex-row items-center"
+              className="relative text-sm md:text-lg text-center font-poppins font-semibold text-green-600 bg-green-300 rounded-md py-2 px-4 flex flex-row items-center justify-center"
               data-aos="flip-up"
             >
               Employment Status:{" "}

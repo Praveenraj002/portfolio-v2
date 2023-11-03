@@ -52,7 +52,7 @@ const Services = () => {
               </div>
               <div>
                 <h1 className="text-xl font-bold font-poppins text-atlassianBlue">
-                  Educational Content Creation
+                  Ed Content Creation
                 </h1>
               </div>
               <div>

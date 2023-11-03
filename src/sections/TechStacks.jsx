@@ -31,8 +31,8 @@ const TechStacks = () => {
         <SectionMiniHeader>TECH STACKS</SectionMiniHeader>
         <SectionHeader>Technologies I&apos;ve been working with</SectionHeader>
       </div>
-      <div className="container mx-auto px-4 mb-6">
-        <div className="flex flex-col md:flex-row flex-wrap gap-4">
+      <div className="container mx-auto px-4 lg:px-20 mb-6">
+        <div className="flex justify-center flex-col md:flex-row flex-wrap gap-4">
           <TechStacksPill
             icon={<FaHtml5 className="text-orange-600" />}
             title="HTML"
