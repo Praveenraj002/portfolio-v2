@@ -1,6 +1,14 @@
 import ProjectsCard from "../components/ProjectsCard";
+import WhiteButton from "../components/WhiteButton";
+import { useState } from "react";
 
 const Projects = () => {
+  const [show, setShow] = useState(false);
+
+  const toggleShow = () => {
+    setShow(!show);
+  };
+
   return (
     <>
       <div className="bg-atlassianBlue my-10 md:my-12">
@@ -35,28 +43,37 @@ const Projects = () => {
                 repo="https://github.com/Praveenraj002/Tasky"
               />
             </div>
-            <div
-              className="flex flex-col md:flex-row gap-6 pt-2 pb-12 items-center justify-center"
-              data-aos="zoom-in-left"
-            >
-              <ProjectsCard
-                title="Natours"
-                description="Made with Sass with improved functionality. The main aim of the project is to showcase the hidden features of CSS and Sass which helps to build micro-animations."
-                demo="https://natourspr.netlify.app/"
-                repo="https://github.com/Praveenraj002/Natours"
-              />
-              <ProjectsCard
-                title="Space X Clone"
-                description="Recreated Space X website including Homepage, menu and some inner pages, also created some micro animations with the help of the CSS keyframes."
-                demo="https://clone-space-x.netlify.app/"
-                repo="https://github.com/Praveenraj002/SpaceX-clone"
-              />
-              <ProjectsCard
-                title="Guess My Number"
-                description="A single player game which enables users to guess the number between 1 and 20. This project was built to learn the essence of JS ie. JavaScript"
-                demo="https://guess-my-number-vert.vercel.app/"
-                repo="https://github.com/Praveenraj002/guess-my-number"
-              />
+            {show && (
+              <>
+                <div
+                  className="flex flex-col md:flex-row gap-6 pt-2 pb-12 items-center justify-center"
+                  data-aos="zoom-in-left"
+                >
+                  <ProjectsCard
+                    title="Natours"
+                    description="Made with Sass with improved functionality. The main aim of the project is to showcase the hidden features of CSS and Sass which helps to build micro-animations."
+                    demo="https://natourspr.netlify.app/"
+                    repo="https://github.com/Praveenraj002/Natours"
+                  />
+                  <ProjectsCard
+                    title="Space X Clone"
+                    description="Recreated Space X website including Homepage, menu and some inner pages, also created some micro animations with the help of the CSS keyframes."
+                    demo="https://clone-space-x.netlify.app/"
+                    repo="https://github.com/Praveenraj002/SpaceX-clone"
+                  />
+                  <ProjectsCard
+                    title="Guess My Number"
+                    description="A single player game which enables users to guess the number between 1 and 20. This project was built to learn the essence of JS ie. JavaScript"
+                    demo="https://guess-my-number-vert.vercel.app/"
+                    repo="https://github.com/Praveenraj002/guess-my-number"
+                  />
+                </div>
+              </>
+            )}
+            <div className="flex items-center justify-center pt-2 pb-8">
+              <WhiteButton onClick={toggleShow}>
+                {show ? "Show less" : "Show more"}
+              </WhiteButton>
             </div>
           </div>
         </div>
