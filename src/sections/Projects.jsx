@@ -54,6 +54,7 @@ const Projects = () => {
                     description="Made with Sass with improved functionality. The main aim of the project is to showcase the hidden features of CSS and Sass which helps to build micro-animations."
                     demo="https://natourspr.netlify.app/"
                     repo="https://github.com/Praveenraj002/Natours"
+                    courseBasedProject={true}
                   />
                   <ProjectsCard
                     title="Space X Clone"
