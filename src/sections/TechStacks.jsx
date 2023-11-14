@@ -18,7 +18,7 @@ import {
   SiTailwindcss,
   // SiChakraui,
   SiRedux,
-  SiMicrosoftsqlserver,
+  // SiMicrosoftsqlserver,
   // SiNodedotjs,
   // SiAmazonaws,
   // SiMongodb,
@@ -75,11 +75,11 @@ const TechStacks = () => {
             icon={<SiTailwindcss className="text-tailwind" />}
             title="Tailwind CSS"
           />
-          <TechStacksPill
+          {/* <TechStacksPill
             icon={<SiMicrosoftsqlserver className="text-red-500" />}
             title="MS SQL Server 2022"
             current
-          />
+          /> */}
           {/* <TechStacksPill
             icon={<SiChakraui className="text-chakra" />}
             title="Chakra UI"
