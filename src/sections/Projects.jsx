@@ -25,6 +25,12 @@ const Projects = () => {
               data-aos="zoom-in-right"
             >
               <ProjectsCard
+                title="Cart Craft"
+                description="A mini mobile store leveraging the useReducer hook and Context API to state management. Users can  add items to the cart, and review their selections"
+                demo="https://cartcraft.netlify.app/"
+                repo="https://github.com/Praveenraj002/cart-craft"
+              />
+              <ProjectsCard
                 title="Cine Pass"
                 description="A user-friendly movie ticket booking front-end web app, providing descriptive movie details.Integrated real time movie information from TMDB API."
                 demo="https://cine-pass.netlify.app/"
@@ -36,12 +42,6 @@ const Projects = () => {
                 demo="https://mapty-pr.netlify.app/"
                 repo="https://github.com/Praveenraj002/Mapty"
               />
-              <ProjectsCard
-                title="Tasky"
-                description="Enable users to save their tasks with optimized descriptions, including the task image, title, category & description and help users to review their tasks."
-                demo="https://tasky-blond.vercel.app/"
-                repo="https://github.com/Praveenraj002/Tasky"
-              />
             </div>
             {show && (
               <>
@@ -49,6 +49,12 @@ const Projects = () => {
                   className="flex flex-col md:flex-row gap-6 pt-2 pb-12 items-center justify-center"
                   data-aos="zoom-in-left"
                 >
+                  <ProjectsCard
+                    title="Tasky"
+                    description="Enable users to save their tasks with optimized descriptions, including the task image, title, category & description and help users to review their tasks."
+                    demo="https://tasky-blond.vercel.app/"
+                    repo="https://github.com/Praveenraj002/Tasky"
+                  />
                   <ProjectsCard
                     title="Natours"
                     description="Made with Sass with improved functionality. The main aim of the project is to showcase the hidden features of CSS and Sass which helps to build micro-animations."
@@ -62,6 +68,15 @@ const Projects = () => {
                     demo="https://clone-space-x.netlify.app/"
                     repo="https://github.com/Praveenraj002/SpaceX-clone"
                   />
+                </div>
+              </>
+            )}
+            {show && (
+              <>
+                <div
+                  className="flex flex-col md:flex-row gap-6 pt-2 pb-12 items-center justify-center"
+                  data-aos="zoom-in-left"
+                >
                   <ProjectsCard
                     title="Guess My Number"
                     description="A single player game which enables users to guess the number between 1 and 20. This project was built to learn the essence of JS ie. JavaScript"
