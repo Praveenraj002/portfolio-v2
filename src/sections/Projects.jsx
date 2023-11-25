@@ -26,7 +26,7 @@ const Projects = () => {
             >
               <ProjectsCard
                 title="Cart Craft"
-                description="A mini mobile store leveraging the useReducer hook and Context API to state management. Users can  add items to the cart, and review their selections"
+                description="A mini mobile store leveraging the useReducer hook and Context API for state management. Users can  add items to the cart, and review their selections"
                 demo="https://cartcraft.netlify.app/"
                 repo="https://github.com/Praveenraj002/cart-craft"
               />
