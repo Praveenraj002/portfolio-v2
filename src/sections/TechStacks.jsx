@@ -77,7 +77,7 @@ const TechStacks = () => {
             title="Tailwind CSS"
           />
           <TechStacksPill
-            icon={<SiAstro className="text-violet-800" />}
+            icon={<SiAstro className="text-black" />}
             title="Astro"
             current
           />
