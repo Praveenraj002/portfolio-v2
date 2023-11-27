@@ -18,6 +18,7 @@ import {
   SiTailwindcss,
   // SiChakraui,
   SiRedux,
+  SiAstro,
   // SiMicrosoftsqlserver,
   // SiNodedotjs,
   // SiAmazonaws,
@@ -74,6 +75,11 @@ const TechStacks = () => {
           <TechStacksPill
             icon={<SiTailwindcss className="text-tailwind" />}
             title="Tailwind CSS"
+          />
+          <TechStacksPill
+            icon={<SiAstro className="text-violet-800" />}
+            title="Astro"
+            current
           />
           {/* <TechStacksPill
             icon={<SiMicrosoftsqlserver className="text-red-500" />}
