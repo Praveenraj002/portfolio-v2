@@ -5,6 +5,7 @@ import SectionHeader from "../components/SectionHeader";
 import { FaLinkedinIn, FaInstagram, FaGithub } from "react-icons/fa";
 import { RiTwitterXFill } from "react-icons/ri";
 // import { GoDotFill } from "react-icons/go";
+import { SiUpwork } from "react-icons/si";
 
 const Contact = () => {
   return (
@@ -40,6 +41,12 @@ const Contact = () => {
           className="flex flex-row flex-wrap items-center justify-center text-center text-atlassianBlue text-xl md:text-2xl gap-3 md:gap-4 my-4"
           data-aos="zoom-in-down"
         >
+          <a
+            href="https://www.upwork.com/freelancers/~011ad39e9186f91f79"
+            className="border-2 border-atlassianBlue rounded-full p-2 hover:bg-atlassianBlue hover:text-white cursor-pointer drop-shadow-md transition duration-300 ease-in-out"
+          >
+            <SiUpwork />
+          </a>
           <a
             href="https://www.linkedin.com/in/praveenraj002/"
             className="border-2 border-atlassianBlue rounded-full p-2 hover:bg-atlassianBlue hover:text-white cursor-pointer drop-shadow-md transition duration-300 ease-in-out"
