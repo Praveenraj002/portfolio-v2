@@ -32,7 +32,7 @@ const NavbarLg = () => {
         <div className="flex justify-between items-center font-poppins">
           <a
             href="#home"
-            className="font-poppins text-2xl font-bold text-deepBlue"
+            className="font-poppins text-2xl font-semibold text-deepBlue"
           >
             Praveen Raj
           </a>

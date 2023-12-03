@@ -15,8 +15,9 @@ const Services = () => {
       <div className="container mx-auto px-4">
         <div className="text-center my-4">
           <h2 className="text-xl md:text-2xl font-poppins font-semibold">
-            You don’t just need a website, you need a{" "}
-            <span className="text-atlassianBlue">high-performing</span> website.
+            &quot;You don’t just need a website, you need a{" "}
+            <span className="text-atlassianBlue">high-performing</span>{" "}
+            website.&quot;
           </h2>
         </div>
         <div className="flex flex-col md:flex-row items-center justify-center gap-6 lg:gap-10 my-6">

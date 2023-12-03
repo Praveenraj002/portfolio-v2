@@ -17,7 +17,7 @@ const Projects = () => {
             <div className="font-inter text-center text-sm lg:text-base text-black font-extrabold my-2 md:my-3">
               SHOWCASE
             </div>
-            <div className="font-poppins text-center text-xl lg:text-2xl text-white font-bold">
+            <div className="font-poppins text-center text-xl lg:text-2xl text-white font-semibold">
               Side Projects
             </div>
             <div

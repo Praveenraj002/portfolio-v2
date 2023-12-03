@@ -17,7 +17,7 @@ const HeroSm = () => {
           <div className="absolute inset-0 flex flex-col gap-3 items-center justify-center z-10 text-center text-white font-poppins container mx-auto px-2 m-0">
             <h2 className="moveInBottom text-xl font-semibold">
               Hello world, this is Praveen Raj.
-            </h2>
+            </h2>``
             <h1 className="text-2xl font-bold">
               I love Building things that lives on the Internet.
             </h1>
