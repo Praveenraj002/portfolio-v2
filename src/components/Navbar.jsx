@@ -32,38 +32,38 @@ const NavbarLg = () => {
         <div className="flex justify-between items-center font-poppins">
           <a
             href="#home"
-            className="font-poppins text-2xl font-semibold text-deepBlue"
+            className="font-poppins text-2xl font-bold text-deepBlue"
           >
             Praveen Raj
           </a>
           <div className="flex items-center gap-5 text-deepGray font-normal text-base">
             <a
               href="#home"
-              className="px-3 py-1 hover:bg-lightGray rounded-sm transition duration-300 ease-in-out"
+              className="px-3 py-1 hover:bg-lightGray rounded-sm transition duration-300 ease-in-out hover:text-deepBlue"
             >
               Home
             </a>
             <a
               href="#about"
-              className="px-3 py-1 hover:bg-lightGray rounded-sm transition duration-300 ease-in-out"
+              className="px-3 py-1 hover:bg-lightGray rounded-sm transition duration-300 ease-in-out hover:text-deepBlue"
             >
               About
             </a>
             <a
               href="#services"
-              className="px-3 py-1 hover:bg-lightGray rounded-sm transition duration-300 ease-in-out"
+              className="px-3 py-1 hover:bg-lightGray rounded-sm transition duration-300 ease-in-out hover:text-deepBlue"
             >
               Services
             </a>
             <a
               href="#workflow"
-              className="px-3 py-1 hover:bg-lightGray rounded-sm transition duration-300 ease-in-out"
+              className="px-3 py-1 hover:bg-lightGray rounded-sm transition duration-300 ease-in-out hover:text-deepBlue"
             >
               Workflow
             </a>
             <a
               href="#projects"
-              className="px-3 py-1 hover:bg-lightGray rounded-sm transition duration-300 ease-in-out"
+              className="px-3 py-1 hover:bg-lightGray rounded-sm transition duration-300 ease-in-out hover:text-deepBlue"
             >
               Projects
             </a>
