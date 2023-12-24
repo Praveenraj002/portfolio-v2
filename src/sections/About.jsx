@@ -4,6 +4,8 @@ import SectionMiniHeader from "../components/SectionMiniHeader";
 
 // Assets
 import PraveenImage from "../assets/praveen.jpg";
+import avasoft from "../assets/logo.png";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
@@ -21,7 +23,7 @@ const About = () => {
               className="w-full h-full rounded-sm drop-shadow-lg cursor-pointer hover:drop-shadow-2xl transition-shadow duration-300"
             />
           </div>
-          <div className="w-full lg:w-2/3 text-center lg:text-start">
+          <div className="w-full lg:w-2/3 flex flex-col items-center  text-center lg:text-start lg:items-start">
             <p className="mb-3">
               Hello! My full name is{" "}
               <span className="text-atlassianBlue">Praveen Raj SL.</span>{" "}
@@ -30,18 +32,18 @@ const About = () => {
               decided to do something in the C-19 Pandemic lockdown.
             </p>
             <p>
-              Fast-forward to today, and I’ve had the privilege of working at 2
-              startup E-learning companies namely{" "}
-              <a href="https://www.techsnap.in/" className="text-atlassianBlue">
-                Techsnap
-              </a>{" "}
-              where i worked as a Front end development Intern and{" "}
-              <a href="https://www.devtown.in/" className="text-atlassianBlue">
-                DevTown
-              </a>{" "}
-              where i worked as a web development Intern and where i started my
-              career as a web developer.
+              Fast-forward to today, Im currently working in{" "}
+              <Link
+                className="text-atlassianBlue"
+                to={"https://www.avasoft.com/"}
+              >
+                AvaSoft
+              </Link>{" "}
+              as a trainee engineer (Full-stack domain) where I am actively
+              engaged in learning and building projects utilizing
+              cutting-edge technologies.
             </p>
+            <img src={avasoft} alt="company-logo" className="w-28 md:36 my-5" />
           </div>
         </div>
       </div>
