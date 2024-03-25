@@ -18,11 +18,11 @@ import {
   SiTailwindcss,
   // SiChakraui,
   SiRedux,
-  SiAstro,
   // SiMicrosoftsqlserver,
   // SiNodedotjs,
   // SiAmazonaws,
   // SiMongodb,
+  SiPython
 } from "react-icons/si";
 
 const TechStacks = () => {
@@ -70,14 +70,15 @@ const TechStacks = () => {
           <TechStacksPill
             icon={<SiRedux className="text-violet-500" />}
             title="Redux"
+            current
           />
           <TechStacksPill
             icon={<SiTailwindcss className="text-tailwind" />}
             title="Tailwind CSS"
           />
           <TechStacksPill
-            icon={<SiAstro className="text-black" />}
-            title="Astro"
+            icon={<SiPython className="text-blue-500" />}
+            title="Python"
             current
           />
           {/* <TechStacksPill

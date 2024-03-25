@@ -39,7 +39,7 @@ const About = () => {
               >
                 AvaSoft
               </Link>{" "}
-              as a trainee engineer (Full-stack domain) where I am actively
+              as a trainee engineer (Full-stack AI domain) where I am actively
               engaged in learning and building projects utilizing
               cutting-edge technologies.
             </p>
