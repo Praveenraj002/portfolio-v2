@@ -35,11 +35,11 @@ const About = () => {
               Fast-forward to today, Im currently working in{" "}
               <Link
                 className="text-atlassianBlue"
-                to={"https://www.avasoft.com/"}
+                to={"https://zeb.co/"}
               >
-                AvaSoft
+                Zeb
               </Link>{" "}
-              as a trainee engineer (Full-stack AI domain) where I am actively
+              as a Full Stack AI Engineer where I am actively
               engaged in learning and building projects utilizing
               cutting-edge technologies.
             </p>

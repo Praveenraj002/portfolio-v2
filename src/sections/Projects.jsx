@@ -77,12 +77,12 @@ const Projects = () => {
                   className="flex flex-col md:flex-row gap-6 pt-2 pb-12 items-center justify-center"
                   data-aos="zoom-in-left"
                 >
-                  <ProjectsCard
+                  {/* <ProjectsCard
                     title="Guess My Number"
                     description="A single player game which enables users to guess the number between 1 and 20. This project was built to learn the essence of JS ie. JavaScript"
                     demo="https://guess-my-number-vert.vercel.app/"
                     repo="https://github.com/Praveenraj002/guess-my-number"
-                  />
+                  /> */}
                 </div>
               </>
             )}

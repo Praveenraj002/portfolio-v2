@@ -23,18 +23,18 @@ const Contact = () => {
               I&apos;m excited to connect with others to chat about projects and
               ideas.
             </p>
-            <h2
+            {/* <h2
               className="relative text-sm md:text-lg text-center font-poppins font-semibold text-green-600 bg-green-300 rounded-md py-2 px-4 block"
               data-aos="flip-up"
             >
               Available For work
-            </h2>
-            {/* <h2
+            </h2> */}
+            <h2
               className="relative text-sm md:text-lg text-center font-poppins font-semibold text-red-600 bg-red-300 rounded-md py-2 px-4 block"
               data-aos="flip-up"
             >
               Unavailable for work
-            </h2> */}
+            </h2>
           </div>
         </div>
         <div

@@ -10,7 +10,7 @@ const Workflow = () => {
     <>
       <div className="mt-12 md:mt-24" id="workflow">
         <SectionMiniHeader>WORKFLOW</SectionMiniHeader>
-        <SectionHeader>My whole process</SectionHeader>
+        <SectionHeader>My 4D process</SectionHeader>
       </div>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-center text-center">
@@ -25,12 +25,12 @@ const Workflow = () => {
         <div className="flex flex-col md:flex-row flex-wrap items-center justify-center gap-8 md:gap-10">
           <WorkflowCard
             number="01."
-            title="Planning"
+            title="Define"
             content="Understanding the website's purpose and identifying its target audience. Additionally, selecting the right technology stack based on the website's specific requirements."
           />
           <WorkflowCard
             number="02."
-            title="Designing"
+            title="Design"
             content="Creating design mockups using tools like Figma for a visual representation. Interactive prototypes to envision user interactions. Ensure responsiveness across different devices."
           />
           <WorkflowCard

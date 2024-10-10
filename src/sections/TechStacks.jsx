@@ -20,9 +20,12 @@ import {
   SiRedux,
   // SiMicrosoftsqlserver,
   // SiNodedotjs,
-  // SiAmazonaws,
-  // SiMongodb,
-  SiPython
+  SiAmazonaws,
+  SiMongodb,
+  SiPython,
+  SiFastapi,
+  SiFlask,
+  SiPostgresql
 } from "react-icons/si";
 
 const TechStacks = () => {
@@ -81,6 +84,15 @@ const TechStacks = () => {
             title="Python"
             current
           />
+          <TechStacksPill
+            icon={<SiFastapi className="text-chakra" />}
+            title="Fast API"
+            current
+          /> 
+          <TechStacksPill
+            icon={<SiFlask className="text-black" />}
+            title="Flask"
+          /> 
           {/* <TechStacksPill
             icon={<SiMicrosoftsqlserver className="text-red-500" />}
             title="MS SQL Server 2022"
@@ -94,14 +106,21 @@ const TechStacks = () => {
             icon={<SiNodedotjs className="text-green-600" />}
             title="Node.js"
           /> */}
-          {/*<TechStacksPill
+          {/*
+          />*/}
+          <TechStacksPill
+            icon={<SiPostgresql className="text-blue-400" />}
+            title="PostgreSQL"
+          /> 
+          <TechStacksPill
             icon={<SiMongodb className="text-green-700" />}
             title="Mongo DB"
           />
           <TechStacksPill
             icon={<SiAmazonaws className="text-blue-900" />}
-            title="AWS"
-          /> */}
+            title="Cloud services"
+            current
+          /> 
         </div>
       </div>
     </>

@@ -1,6 +1,7 @@
 // Components
 import BlueButton from "../components/BlueButton";
 import WhiteButton from "../components/WhiteButton";
+import Logo from "../assets/Pr-logo.png";
 
 import BgImageLg from "../assets/Images/bg.png";
 import BgImageSm from "../assets/Images/mobileBG.png";
@@ -15,6 +16,9 @@ const HeroSm = () => {
           </div>
 
           <div className="absolute inset-0 flex flex-col gap-3 items-center justify-center z-10 text-center text-white font-poppins container mx-auto px-2 m-0">
+            <div className="moveInBottom w-16 md:w-20">
+              <img src={Logo} alt="Image" className="w-full h-full" />
+            </div>
             <h2 className="moveInBottom text-xl font-semibold">
               Hello world, this is Praveen Raj.
             </h2>
@@ -50,6 +54,9 @@ const HeroLg = () => {
             <img src={BgImageLg} alt="Image" className="w-full h-full" />
           </div>
           <div className="absolute inset-0 flex flex-col gap-3 items-center justify-center z-10 text-center text-white font-poppins">
+            <div className="moveInBottom w-16 md:w-20">
+                <img src={Logo} alt="Image" className="w-full h-full" />
+            </div>
             <h2 className="moveInBottom text-2xl font-semibold">
               Hello world, this is Praveen Raj.
             </h2>

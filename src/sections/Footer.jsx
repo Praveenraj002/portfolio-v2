@@ -14,7 +14,7 @@ const Footer = () => {
             </div>
             <h1 className="flex flex-row gap-2 items-center text-white font-poppins font-medium text-sm md:text-base">
               <IoMdMail />
-              reachpraveenrajsl@gmail.com
+              praveenrajslbusiness@gmail.com
             </h1>
             <h1 className="text-white font-poppins font-semibold text-base md:text-lg">
               &copy; {currentYear} Praveen Raj. All rights reserved
