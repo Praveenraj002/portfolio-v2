@@ -4,7 +4,7 @@ import SectionMiniHeader from "../components/SectionMiniHeader";
 
 // Assets
 import PraveenImage from "../assets/praveen.jpg";
-import avasoft from "../assets/logo.png";
+import avasoft from "../assets/ZEB-Header.svg";
 import { Link } from "react-router-dom";
 
 const About = () => {
