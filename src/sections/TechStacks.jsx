@@ -27,6 +27,7 @@ import {
   SiFlask,
   SiPostgresql
 } from "react-icons/si";
+import { BsStars } from "react-icons/bs";
 
 const TechStacks = () => {
   return (
@@ -119,6 +120,11 @@ const TechStacks = () => {
           <TechStacksPill
             icon={<SiAmazonaws className="text-blue-900" />}
             title="Cloud services"
+            current
+          /> 
+          <TechStacksPill
+            icon={<BsStars className="text-yellow-400" />}
+            title="AI Engineering"
             current
           /> 
         </div>
