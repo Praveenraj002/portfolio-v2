@@ -21,7 +21,7 @@ const Contact = () => {
           <div className="text-center my-2">
             <p className="mb-3">
               I&apos;m excited to connect with others to chat about projects and
-              ideas.
+              ideas. You can contact me anytime.
             </p>
             {/* <h2
               className="relative text-sm md:text-lg text-center font-poppins font-semibold text-green-600 bg-green-300 rounded-md py-2 px-4 block"
@@ -33,7 +33,7 @@ const Contact = () => {
               className="relative text-sm md:text-lg text-center font-poppins font-semibold text-red-600 bg-red-300 rounded-md py-2 px-4 block"
               data-aos="flip-up"
             >
-              Unavailable for work
+              Oops, Unavailable for work
             </h2>
           </div>
         </div>

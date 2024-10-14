@@ -124,7 +124,7 @@ const TechStacks = () => {
           /> 
           <TechStacksPill
             icon={<BsStars className="text-yellow-400" />}
-            title="AI Engineering"
+            title="AI Stuff"
             current
           /> 
         </div>
