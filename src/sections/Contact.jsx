@@ -18,10 +18,9 @@ const Contact = () => {
               Let&apos;s <span className="text-atlassianBlue">Connect</span>
             </SectionHeader>
           </div>
-          <div className="text-center my-2">
+          <div className="w-80 text-center my-2">
             <p className="mb-3">
-              I&apos;m excited to connect with others to chat about projects and
-              ideas. You can contact me anytime.
+            My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
             </p>
             {/* <h2
               className="relative text-sm md:text-lg text-center font-poppins font-semibold text-green-600 bg-green-300 rounded-md py-2 px-4 block"
