@@ -22,18 +22,18 @@ const Contact = () => {
             <p className="mb-3">
             My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
             </p>
-            <h2
+            {/* <h2
               className="relative text-sm md:text-lg text-center font-poppins font-semibold text-green-600 bg-green-300 rounded-md py-2 px-4 block"
               data-aos="flip-up"
             >
               Available For work
-            </h2>
-            {/* <h2
+            </h2> */}
+            <h2
               className="relative text-sm md:text-lg text-center font-poppins font-semibold text-red-600 bg-red-300 rounded-md py-2 px-4 block"
               data-aos="flip-up"
             >
               Oops, Unavailable for work
-            </h2> */}
+            </h2>
           </div>
         </div>
         <div
