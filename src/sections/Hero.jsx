@@ -1,7 +1,7 @@
 // Components
 // import BlueButton from "../components/BlueButton";
 // import WhiteButton from "../components/WhiteButton";
-import Logo from "../assets/Pr-logo.png";
+// import Logo from "../assets/Pr-logo.png";
 
 // import BgImageLg from "../assets/Images/bg.png";
 // import BgImageSm from "../assets/Images/mobileBG.png";
@@ -128,11 +128,11 @@ const Hero = () => {
           className="w-20 h-20 animate-bounce-slow"
         /> */}
 
-        <h1 className="text-3xl md:text-5xl font-bold mt-4">
+        <h1 className="text-2xl md:text-3xl font-bold mt-4">
           System update in progress: v3.0 coming soon.
         </h1>
 
-        <p className="mt-8 text-sm md:text-base text-gray-300">
+        <p className="text-sm md:text-base text-gray-300">
           Saving changes… might take a few commits.
         </p>
       </div>
