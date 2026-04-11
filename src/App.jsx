@@ -1,26 +1,25 @@
-// import Navbar from "./components/Navbar";
-// import About from "./sections/About";
-// import Contact from "./sections/Contact";
-// import Footer from "./sections/Footer";
+import Navbar from "./components/Navbar";
 import Hero from "./sections/Hero";
-// import Projects from "./sections/Projects";
-// import Services from "./sections/Services";
-// import TechStacks from "./sections/TechStacks";
-// import Workflow from "./sections/Workflow";
+import ProjectsSection from "./sections/Projects";
+import Experience from "./sections/Experience";
+import About from "./sections/About";
+import Contact from "./sections/Contact";
+import Footer from "./sections/Footer";
 
 function App() {
   return (
-    <>
-      {/* <Navbar /> */}
-      <Hero />
-      {/* <About />
-      <TechStacks />
-      <Services />
-      <Workflow />
-      <Projects />
-      <Contact />
-      <Footer /> */}
-    </>
+    <div className="app-shell">
+      <div id="top" />
+      <Navbar />
+      <main>
+        <Hero />
+        <ProjectsSection />
+        <Experience />
+        <About />
+        <Contact />
+      </main>
+      <Footer />
+    </div>
   );
 }
 

@@ -1,94 +1,67 @@
-const NavbarSm = () => {
-  return (
-    <>
-      <div className="container mx-auto px-4 py-3 m-0">
-        <div className="flex items-center justify-center">
-          <a
-            href="#home"
-            className="font-poppins text-xl font-bold text-center text-deepBlue cursor-pointer"
-          >
-            Praveen Raj
-          </a>
-          {/* <div>
-            <button
-              id="menu-btn"
-              className="z-30 block lg:hidden focus:outline-none hamburger"
-            >
-              <span className="hamburger-top"></span>
-              <span className="hamburger-middle"></span>
-              <span className="hamburger-bottom"></span>
-            </button>
-          </div> */}
-        </div>
-      </div>
-    </>
-  );
-};
-
-const NavbarLg = () => {
-  return (
-    <>
-      <div className="container mx-auto px-4 py-3">
-        <div className="flex justify-between items-center font-poppins">
-          <a
-            href="#home"
-            className="font-poppins text-2xl font-bold text-deepBlue"
-          >
-            Praveen Raj
-          </a>
-          <div className="flex items-center gap-5 text-deepGray font-normal text-base">
-            <a
-              href="#home"
-              className="px-3 py-1 hover:bg-lightGray rounded-sm transition duration-300 ease-in-out hover:text-deepBlue"
-            >
-              Home
-            </a>
-            <a
-              href="#about"
-              className="px-3 py-1 hover:bg-lightGray rounded-sm transition duration-300 ease-in-out hover:text-deepBlue"
-            >
-              About
-            </a>
-            <a
-              href="#services"
-              className="px-3 py-1 hover:bg-lightGray rounded-sm transition duration-300 ease-in-out hover:text-deepBlue"
-            >
-              Services
-            </a>
-            <a
-              href="#workflow"
-              className="px-3 py-1 hover:bg-lightGray rounded-sm transition duration-300 ease-in-out hover:text-deepBlue"
-            >
-              Workflow
-            </a>
-            <a
-              href="#projects"
-              className="px-3 py-1 hover:bg-lightGray rounded-sm transition duration-300 ease-in-out hover:text-deepBlue"
-            >
-              Projects
-            </a>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-};
+import { useState } from "react";
+import ResumePdf from "../assets/Resume/Resume.pdf";
+import BrandLogo from "../assets/Pr-logo.png";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleToggle = () => {
+    setIsOpen((prev) => !prev);
+  };
+
+  const handleClose = () => {
+    setIsOpen(false);
+  };
+
   return (
-    <>
-      <nav
-        className="top-0 z-50 fixed w-screen bg-white drop-shadow-xl"
-        id="navbar"
-      >
-        <div className="lg:hidden ">
-          <NavbarSm />
-        </div>
-        <div className="hidden lg:block ">
-          <NavbarLg />
-        </div>
+    <header className="nav">
+      <div className="nav-inner">
+        <a className="nav-logo" href="#top" aria-label="Praveen Raj home">
+          <img src={BrandLogo} alt="Praveen Raj logo" />
+        </a>
+        <button
+          className="nav-toggle"
+          type="button"
+          aria-label="Toggle navigation menu"
+          aria-expanded={isOpen}
+          onClick={handleToggle}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+        <nav className="nav-links">
+          <a href="#top">Home</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <a className="nav-cta nav-resume" href={ResumePdf}>
+          Resume
+        </a>
+      </div>
+      <nav className={`nav-mobile ${isOpen ? "open" : ""}`}>
+        <a href="#top" onClick={handleClose}>
+          Home
+        </a>
+        <a href="#projects" onClick={handleClose}>
+          Projects
+        </a>
+        <a href="#experience" onClick={handleClose}>
+          Experience
+        </a>
+        <a href="#about" onClick={handleClose}>
+          About
+        </a>
+        <a href="#contact" onClick={handleClose}>
+          Contact
+        </a>
+        <a className="nav-cta" href={ResumePdf} onClick={handleClose}>
+          Resume
+        </a>
       </nav>
-    </>
+    </header>
   );
 };
 
