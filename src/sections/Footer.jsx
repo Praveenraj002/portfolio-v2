@@ -14,7 +14,7 @@ const Footer = () => {
       <div className="footer-inner">
         <div className="footer-brand">
           <div className="footer-built">
-            <span>Built with the help of</span>
+            <span>Built with</span>
             <Codex.Avatar size={24} />
           </div>
           <p>© {currentYear} All rights reserved.</p>

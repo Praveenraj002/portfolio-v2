@@ -1,5 +1,5 @@
-import ZebLogo from "../assets/zeb.png";
-import AvasoftLogo from "../assets/ava-gemini.png";
+import ZebLogo from "../assets/Images/zeb.png";
+import AvasoftLogo from "../assets/Images/ava-gemini.png";
 import Reveal from "../components/Reveal";
 
 const Experience = () => {

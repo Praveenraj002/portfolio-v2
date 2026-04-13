@@ -14,6 +14,9 @@
   --shadow: 0 14px 30px rgba(16, 45, 90, 0.18);
   --card: rgba(255, 255, 255, 0.45);
   --card-solid: #f4f8ff;
+  --hero-font: "Georgia", "Times New Roman", Times, serif;
+  /* --hero-font: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; */
+
 }
 
 * {
@@ -22,7 +25,7 @@
 
 body {
   margin: 0;
-  font-family: "Inter", sans-serif;
+  font-family: "Inter";
   color: var(--ink);
   background: linear-gradient(135deg, #fff4de 0%, #e7edff 45%, #e1f8ed 100%);
   min-height: 100vh;
@@ -245,7 +248,7 @@ a {
 }
 
 .hero-intro h1 {
-  font-family: "sans-serif";
+  font-family: var(--hero-font);
   font-weight: 520;
   font-size: clamp(2.4rem, 3vw, 3.6rem);
   margin: 0.6rem 0 1rem;
@@ -360,7 +363,7 @@ a {
 .experience-header h2,
 .about h2,
 .contact h2 {
-  font-family: "sans-serif";
+  font-family: var(--hero-font);
   font-weight: 520;
   font-size: clamp(2rem, 2.6vw, 2.6rem);
   margin: 0;

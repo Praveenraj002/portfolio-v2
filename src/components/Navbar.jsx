@@ -1,6 +1,6 @@
 import { useState } from "react";
-import ResumePdf from "../assets/Resume/Resume.pdf";
-import BrandLogo from "../assets/Pr-logo.png";
+import ResumePdf from "../assets/Resume/Praveenraj-Resume-AI-engineering.pdf";
+import BrandLogo from "../assets/Images/Pr-logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
