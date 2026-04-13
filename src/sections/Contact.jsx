@@ -12,9 +12,13 @@ const Contact = () => {
           </p>
         </div>
         <div className="contact-card">
-          <p className="meta-label">Email</p>
+          <p className="meta-label">Email (FOR COLLABORATION OR BUSINESS RELATED WORKS)</p> 
           <a href="mailto:praveenrajslbusiness@gmail.com">
             praveenrajslbusiness@gmail.com
+          </a>
+          <p className="meta-label">Email (FOR FULL TIME ROLES)</p>
+          <a href="mailto:reachpraveenrajsl@gmail.com">
+            reachpraveenrajsl@gmail.com
           </a>
           <p className="meta-label">Elsewhere</p>
           <div className="contact-links">
