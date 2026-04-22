@@ -24,7 +24,7 @@ const Contact = () => {
           <div className="contact-links">
             <a href="https://www.linkedin.com/in/praveenraj002/">LinkedIn</a>
             <a href="https://github.com/Praveenraj002">GitHub</a>
-            <a href="https://twitter.com/rajpraveen002">Twitter</a>
+            <a href="https://x.com/rajpraveen002">X</a>
             <a href="https://www.instagram.com/praveenraj.webdev/">
               Instagram
             </a>
