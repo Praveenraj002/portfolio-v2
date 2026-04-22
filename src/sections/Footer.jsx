@@ -15,7 +15,14 @@ const Footer = () => {
         <div className="footer-brand">
           <div className="footer-built">
             <span>Built with</span>
-            <Codex.Avatar size={24} />
+            <a
+              href="https://chatgpt.com/codex/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Open Codex website"
+            >
+              <Codex.Avatar size={24} />
+            </a>
           </div>
           <p>© {currentYear} All rights reserved.</p>
         </div>

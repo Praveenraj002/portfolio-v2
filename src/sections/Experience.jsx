@@ -20,11 +20,25 @@ const Experience = () => {
           <article className="experience-card">
             <div className="experience-top">
               <div className="experience-company">
-                <div className="experience-logo">
+                <a
+                  className="experience-logo"
+                  href="https://zeb.co/"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Open zeb website"
+                >
                   <img src={ZebLogo} alt="zeb logo" />
-                </div>
+                </a>
                 <div>
-                  <h3>zeb</h3>
+                  <h3>
+                    <a
+                      href="https://zeb.co/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      zeb
+                    </a>
+                  </h3>
                   <p className="experience-role">
                     Software Engineer · AI Platform Engineering
                   </p>
@@ -60,11 +74,25 @@ const Experience = () => {
           <article className="experience-card">
             <div className="experience-top">
               <div className="experience-company">
-                <div className="experience-logo">
+                <a
+                  className="experience-logo"
+                  href="https://www.avasoft.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Open Avasoft website"
+                >
                   <img src={AvasoftLogo} alt="Avasoft logo" />
-                </div>
+                </a>
                 <div>
-                  <h3>Avasoft</h3>
+                  <h3>
+                    <a
+                      href="https://www.avasoft.com/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Avasoft
+                    </a>
+                  </h3>
                   <p className="experience-role">
                     Software Engineer · AI/ML Team
                   </p>

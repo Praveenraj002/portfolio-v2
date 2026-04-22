@@ -15,52 +15,58 @@ const Navbar = () => {
 
   return (
     <header className="nav">
-      <div className="nav-inner">
-        <a className="nav-logo" href="#top" aria-label="Praveen Raj home">
-          <img src={BrandLogo} alt="Praveen Raj logo" />
-        </a>
-        <button
-          className="nav-toggle"
-          type="button"
-          aria-label="Toggle navigation menu"
-          aria-expanded={isOpen}
-          onClick={handleToggle}
+      <div className={`nav-shell ${isOpen ? "menu-open" : ""}`}>
+        <div className="nav-inner">
+          <a className="nav-logo" href="#top" aria-label="Praveen Raj home">
+            <img src={BrandLogo} alt="Praveen Raj logo" />
+          </a>
+          <button
+            className={`nav-toggle ${isOpen ? "open" : ""}`}
+            type="button"
+            aria-label="Toggle navigation menu"
+            aria-expanded={isOpen}
+            aria-controls="mobile-nav"
+            onClick={handleToggle}
+          >
+            <span />
+            <span />
+            <span />
+          </button>
+          <nav className="nav-links">
+            <a href="#top">Home</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+          </nav>
+          <a className="nav-cta nav-resume" href={ResumePdf}>
+            Resume
+          </a>
+        </div>
+        <nav
+          id="mobile-nav"
+          className={`nav-mobile ${isOpen ? "open" : ""}`}
         >
-          <span />
-          <span />
-          <span />
-        </button>
-        <nav className="nav-links">
-          <a href="#top">Home</a>
-          <a href="#projects">Projects</a>
-          <a href="#experience">Experience</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
+          <a href="#top" onClick={handleClose}>
+            Home
+          </a>
+          <a href="#projects" onClick={handleClose}>
+            Projects
+          </a>
+          <a href="#experience" onClick={handleClose}>
+            Experience
+          </a>
+          <a href="#about" onClick={handleClose}>
+            About
+          </a>
+          <a href="#contact" onClick={handleClose}>
+            Contact
+          </a>
+          <a className="nav-cta" href={ResumePdf} onClick={handleClose}>
+            Resume
+          </a>
         </nav>
-        <a className="nav-cta nav-resume" href={ResumePdf}>
-          Resume
-        </a>
       </div>
-      <nav className={`nav-mobile ${isOpen ? "open" : ""}`}>
-        <a href="#top" onClick={handleClose}>
-          Home
-        </a>
-        <a href="#projects" onClick={handleClose}>
-          Projects
-        </a>
-        <a href="#experience" onClick={handleClose}>
-          Experience
-        </a>
-        <a href="#about" onClick={handleClose}>
-          About
-        </a>
-        <a href="#contact" onClick={handleClose}>
-          Contact
-        </a>
-        <a className="nav-cta" href={ResumePdf} onClick={handleClose}>
-          Resume
-        </a>
-      </nav>
     </header>
   );
 };
