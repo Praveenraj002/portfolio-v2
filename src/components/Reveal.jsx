@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import PropTypes from "prop-types";
 
 const Reveal = ({
   as: Tag = "div",
@@ -44,3 +45,11 @@ const Reveal = ({
 };
 
 export default Reveal;
+
+Reveal.propTypes = {
+  as: PropTypes.elementType,
+  className: PropTypes.string,
+  threshold: PropTypes.number,
+  rootMargin: PropTypes.string,
+  triggerOnce: PropTypes.bool,
+};

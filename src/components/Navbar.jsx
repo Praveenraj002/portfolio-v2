@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import ResumePdf from "../assets/Resume/Praveenraj-Resume-AI-engineering.pdf";
 import BrandLogo from "../assets/Images/Pr-logo.png";
 
@@ -17,51 +18,57 @@ const Navbar = () => {
     <header className="nav">
       <div className={`nav-shell ${isOpen ? "menu-open" : ""}`}>
         <div className="nav-inner">
-          <a className="nav-logo" href="#top" aria-label="Praveen Raj home">
+          <Link className="nav-logo" to="/#top" aria-label="Praveen Raj home">
             <img src={BrandLogo} alt="Praveen Raj logo" />
-          </a>
-          <button
-            className={`nav-toggle ${isOpen ? "open" : ""}`}
-            type="button"
-            aria-label="Toggle navigation menu"
-            aria-expanded={isOpen}
-            aria-controls="mobile-nav"
-            onClick={handleToggle}
-          >
-            <span />
-            <span />
-            <span />
-          </button>
-          <nav className="nav-links">
-            <a href="#top">Home</a>
-            <a href="#projects">Projects</a>
-            <a href="#experience">Experience</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-          </nav>
-          <a className="nav-cta nav-resume" href={ResumePdf}>
-            Resume
-          </a>
+          </Link>
+          <div className="nav-actions">
+            <nav className="nav-links">
+              <Link to="/#top">Home</Link>
+              <Link to="/#projects">Projects</Link>
+              <Link to="/#experience">Experience</Link>
+              <Link to="/#about">About</Link>
+              <Link to="/blog">Blog</Link>
+              <Link to="/#contact">Contact</Link>
+              <a className="nav-cta nav-resume" href={ResumePdf}>
+                Resume
+              </a>
+            </nav>
+            <button
+              className={`nav-toggle ${isOpen ? "open" : ""}`}
+              type="button"
+              aria-label="Toggle navigation menu"
+              aria-expanded={isOpen}
+              aria-controls="mobile-nav"
+              onClick={handleToggle}
+            >
+              <span />
+              <span />
+              <span />
+            </button>
+          </div>
         </div>
         <nav
           id="mobile-nav"
           className={`nav-mobile ${isOpen ? "open" : ""}`}
         >
-          <a href="#top" onClick={handleClose}>
+          <Link to="/#top" onClick={handleClose}>
             Home
-          </a>
-          <a href="#projects" onClick={handleClose}>
+          </Link>
+          <Link to="/#projects" onClick={handleClose}>
             Projects
-          </a>
-          <a href="#experience" onClick={handleClose}>
+          </Link>
+          <Link to="/#experience" onClick={handleClose}>
             Experience
-          </a>
-          <a href="#about" onClick={handleClose}>
+          </Link>
+          <Link to="/#about" onClick={handleClose}>
             About
-          </a>
-          <a href="#contact" onClick={handleClose}>
+          </Link>
+          <Link to="/blog" onClick={handleClose}>
+            Blog
+          </Link>
+          <Link to="/#contact" onClick={handleClose}>
             Contact
-          </a>
+          </Link>
           <a className="nav-cta" href={ResumePdf} onClick={handleClose}>
             Resume
           </a>

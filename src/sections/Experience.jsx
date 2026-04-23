@@ -9,7 +9,7 @@ const Experience = () => {
         <div className="experience-header">
           <div>
             <p className="eyebrow">Experience</p>
-            <h2>Building AI platforms with pragmatic engineering.</h2>
+            <h2>Building Softwares with pragmatic engineering.</h2>
           </div>
           <p>
             Two roles focused on agentic systems, data platforms, and shipping
