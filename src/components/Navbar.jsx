@@ -27,7 +27,7 @@ const Navbar = () => {
               <Link to="/#projects">Projects</Link>
               <Link to="/#experience">Experience</Link>
               <Link to="/#about">About</Link>
-              <Link to="/blog">Blog</Link>
+              {/* <Link to="/blog">Blog</Link> */}
               <Link to="/#contact">Contact</Link>
               <a className="nav-cta nav-resume" href={ResumePdf}>
                 Resume
@@ -63,9 +63,9 @@ const Navbar = () => {
           <Link to="/#about" onClick={handleClose}>
             About
           </Link>
-          <Link to="/blog" onClick={handleClose}>
+          {/* <Link to="/blog" onClick={handleClose}>
             Blog
-          </Link>
+          </Link> */}
           <Link to="/#contact" onClick={handleClose}>
             Contact
           </Link>
