@@ -1026,6 +1026,34 @@ a {
   margin: 0;
 }
 
+.blog-post-points {
+  margin: 0.35rem 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.blog-post-points li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: 0.85rem;
+  padding: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.blog-post-point-marker {
+  width: 10px;
+  height: 10px;
+  margin-top: 0.45rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #8dc2ff, #1663d6);
+  box-shadow: 0 0 0 4px rgba(22, 99, 214, 0.12);
+  flex-shrink: 0;
+}
+
 .blog-post-body h2 {
   font-family: var(--display-font);
   font-size: 1.45rem;

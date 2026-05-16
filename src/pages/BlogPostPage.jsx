@@ -12,6 +12,19 @@ const renderContentBlock = (block) => {
     return <h2 key={block.text}>{block.text}</h2>;
   }
 
+  if (block.type === "points") {
+    return (
+      <ul className="blog-post-points" key={block.items.join("|")}>
+        {block.items.map((item) => (
+          <li key={item}>
+            <span className="blog-post-point-marker" aria-hidden="true" />
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
+    );
+  }
+
   if (block.type === "image") {
     return (
       <figure className="blog-post-image" key={block.src}>

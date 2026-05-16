@@ -38,7 +38,7 @@ const BlogPage = () => {
               </Link>
             </div>
           )}
-
+  
           {hasPosts && (
             <>
               <article className="blog-featured-card">
