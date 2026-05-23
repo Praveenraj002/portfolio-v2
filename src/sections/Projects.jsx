@@ -4,6 +4,17 @@ import Reveal from "../components/Reveal";
 
 const projects = [
   {
+    projectName: "Claude Code Review Service",
+    projectDescription:
+      "An agentic, MCP-driven system that lets users discover compatible source–target connections via a chatbot and automatically spin up end-to-end data replication pipelines.",
+    techStacks: ["Agentic AI", "Claude Agent SDK", "Azure DevOps", "Python"],
+    year: "2026",
+    projectType: "Company",
+    status: "Live",
+    role: "AI Engineer",
+    private: true,
+  },
+  {
     projectName: "Replication Pipeline agent",
     projectDescription:
       "An agentic, MCP-driven system that lets users discover compatible source–target connections via a chatbot and automatically spin up end-to-end data replication pipelines.",

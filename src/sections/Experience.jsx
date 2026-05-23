@@ -69,6 +69,11 @@ const Experience = () => {
                 validates, and manages rules via chat, cutting manual effort by
                 90%.
               </li>
+              <li>
+                Developed a Automated Code review service that uses AI to
+                analyze code quality+security, identify potential issues, and
+                provide feebacks.
+              </li>
             </ul>
           </article>
           <article className="experience-card">
