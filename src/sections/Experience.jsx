@@ -72,7 +72,7 @@ const Experience = () => {
               <li>
                 Developed a Automated Code review service that uses AI to
                 analyze code quality+security, identify potential issues, and
-                provide feebacks.
+                provide feedbacks.
               </li>
             </ul>
           </article>
