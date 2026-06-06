@@ -7,7 +7,7 @@ const Hero = () => {
         <div className="hero-intro">
           <p className="eyebrow">Praveen Raj</p>
           <h1>
-            Building Intelligent systems that talk to data, think in agents, and ship on time.
+            Building Intelligent systems that turn repetitive tasks into Autonomous AI workflows.
           </h1>
           <p className="lead">
             Full-stack AI engineer specialising in Building  thoughtful Agentic systems, expressive interfaces, and robust backend services.
@@ -26,7 +26,7 @@ const Hero = () => {
           <div className="panel-card">
             <p className="panel-title">Availability</p>
             <p className="panel-body">
-              Open to side projects and technical consultations. Not looking for full-time roles.
+              Open to side projects and technical consultations. Not looking for full-time roles at this time.
             </p>
           </div>
           <div className="panel-card">

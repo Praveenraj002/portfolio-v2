@@ -6,7 +6,7 @@ const projects = [
   {
     projectName: "Claude Code Review Service",
     projectDescription:
-      "An agentic, MCP-driven system that lets users discover compatible source–target connections via a chatbot and automatically spin up end-to-end data replication pipelines.",
+      "AI Service that uses claude agent sdk to analyze code quality+security, identify potential issues, and provide feedbacks.  Reduces the time taken to review code by 70%.",
     techStacks: ["Agentic AI", "Claude Agent SDK", "Azure DevOps", "Python"],
     year: "2026",
     projectType: "Company",

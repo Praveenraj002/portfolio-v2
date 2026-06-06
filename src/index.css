@@ -155,7 +155,7 @@ a {
 
 .nav-shell {
   position: relative;
-  width: min(1120px, calc(100vw - 2rem));
+  width: min(1200px, calc(100vw - 2rem));
   margin: 0 auto;
 }
 
@@ -320,9 +320,9 @@ a {
 }
 
 .hero-inner {
-  max-width: 1120px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.75rem;
+  padding: 0 1.5rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 3rem;
@@ -332,15 +332,15 @@ a {
   font-family: var(--display-font);
   font-weight: 700;
   letter-spacing: -0.04em;
-  font-size: clamp(2.4rem, 3vw, 3.6rem);
+  font-size: clamp(2.1rem, 2.35vw, 3.25rem);
   margin: 0.6rem 0 1rem;
   line-height: 1.18;
 }
 
 .lead {
-  font-size: 1.05rem;
+  font-size: clamp(0.98rem, 0.8vw, 1.05rem);
   color: var(--muted);
-  max-width: 34rem;
+  max-width: 38rem;
 }
 
 .hero-actions {
@@ -414,9 +414,9 @@ a {
 }
 
 .section-inner {
-  max-width: 1120px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.75rem;
+  padding: 0 1.5rem;
 }
 
 .split {
@@ -436,9 +436,10 @@ a {
 
 .projects-header {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
   gap: 2rem;
   margin-bottom: 2rem;
+  align-items: start;
 }
 
 .projects-header h2,
@@ -451,7 +452,7 @@ a {
   font-family: var(--display-font);
   font-weight: 700;
   letter-spacing: -0.035em;
-  font-size: clamp(2rem, 2.6vw, 2.6rem);
+  font-size: clamp(1.85rem, 2vw, 2.45rem);
   margin: 0;
   line-height: 1.2;
 }
@@ -463,9 +464,10 @@ a {
 
 .experience-header {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
   gap: 2rem;
   margin-bottom: 2rem;
+  align-items: start;
 }
 
 .experience-header p {
@@ -530,7 +532,7 @@ a {
   font-family: var(--display-font);
   font-weight: 700;
   letter-spacing: -0.025em;
-  font-size: 1.4rem;
+  font-size: clamp(1.2rem, 1.1vw, 1.4rem);
 }
 
 .experience-card h3 a {
@@ -627,7 +629,7 @@ a {
   font-family: var(--display-font);
   font-weight: 700;
   letter-spacing: -0.025em;
-  font-size: 1.3rem;
+  font-size: clamp(1.1rem, 1vw, 1.3rem);
   margin: 0;
 }
 
@@ -768,7 +770,7 @@ a {
 
 .contact-inner {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
   gap: 2rem;
   align-items: start;
 }
@@ -810,7 +812,7 @@ a {
 
 .blog-hero-inner {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
   gap: 2rem;
   align-items: start;
 }
@@ -1118,9 +1120,9 @@ a {
 }
 
 .footer-inner {
-  max-width: 1120px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.75rem;
+  padding: 0 1.5rem;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -1177,6 +1179,57 @@ a {
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.projects-header > :first-child,
+.experience-header > :first-child,
+.contact-inner > :first-child,
+.blog-hero-inner > :first-child,
+.split > :first-child {
+  max-width: 44rem;
+}
+
+@media (min-width: 1440px) {
+  .hero {
+    padding-top: 4.5rem;
+  }
+
+  .hero-inner,
+  .section-inner,
+  .nav-shell,
+  .footer-inner {
+    max-width: 1280px;
+  }
+
+  .hero-inner,
+  .section-inner,
+  .footer-inner {
+    padding-inline: 1.25rem;
+  }
+
+  .hero-intro h1 {
+    font-size: clamp(2rem, 2vw, 3rem);
+  }
+
+  .lead {
+    font-size: 1rem;
+    max-width: 36rem;
+  }
+
+  .projects-header h2,
+  .experience-header h2,
+  .about h2,
+  .contact h2,
+  .blog-hero h1,
+  .blog-featured-card h2,
+  .blog-card h2 {
+    font-size: clamp(1.75rem, 1.7vw, 2.2rem);
+  }
+
+  .experience-card h3,
+  .projects-card h3 {
+    font-size: 1.15rem;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1373,11 +1426,18 @@ a {
 }
 
 @media (max-width: 920px) {
+  .projects-header,
+  .experience-header,
+  .contact-inner,
+  .blog-hero-inner,
+  .split {
+    grid-template-columns: 1fr;
+  }
+
   .projects-card {
     flex-basis: calc((100% - 1.5rem) / 2);
   }
 
-  .blog-hero-inner,
   .blog-featured-card {
     grid-template-columns: 1fr;
   }

@@ -7,7 +7,7 @@ const Contact = () => {
         <div>
           <p className="eyebrow">Contact</p>
           <h2>Have a problem worth solving? Let&apos;s talk.</h2>
-          <p>
+          <p className="mt-4">
             If you have a product that needs clarity, an engineer who can take it from idea to production, or an idea that should feel more alive, I&apos;m here to help.
           </p>
         </div>
