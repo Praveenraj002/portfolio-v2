@@ -1,5 +1,6 @@
 import ZebLogo from "../assets/Images/zeb.png";
 import AvasoftLogo from "../assets/Images/ava-gemini.png";
+import ConcreateLogo from "../assets/Images/concreate.png";
 import Reveal from "../components/Reveal";
 
 const Experience = () => {
@@ -128,6 +129,44 @@ const Experience = () => {
               <li>
                 Led projects end-to-end from requirements to delivery with 100%
                 on-time execution and peer enablement.
+              </li>
+            </ul>
+          </article>
+          <article className="experience-card">
+            <div className="experience-top">
+              <div className="experience-company">
+                <a
+                  className="experience-logo"
+                  href="https://www.concreate.in/"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Open Concreate website"
+                >
+                  <img src={ConcreateLogo} alt="Concreate logo" />
+                </a>
+                <div>
+                  <h3>
+                    <a
+                      href="https://www.concreate.in/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Concreate
+                    </a>
+                  </h3>
+                  <p className="experience-role">
+                    Web Developer · Internship
+                  </p>
+                </div>
+              </div>
+              <div className="experience-meta">
+                <p>Chennai, TN</p>
+                <p>Sep 2023 - Sep 2023</p>
+              </div>
+            </div>
+            <ul className="experience-points">
+              <li>
+                Developed client-requested websites, translating requirements into functional, responsive web solutions using advanced front-end technologies aligned with the clients brand and business needs.
               </li>
             </ul>
           </article>
