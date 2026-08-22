@@ -5,7 +5,7 @@ const Hero = () => {
     <Reveal as="section" className="hero" id="home">
       <div className="hero-inner">
         <div className="hero-intro">
-          <p className="eyebrow">Praveen Raj</p>
+          <p className="eyebrow font">{"// praveen raj -README.md"}</p>
           <h1>
             Building Intelligent systems that turn repetitive tasks into Autonomous AI workflows.
           </h1>
@@ -13,6 +13,7 @@ const Hero = () => {
             Full-stack AI engineer specialising in Building  thoughtful Agentic systems, expressive interfaces, and robust backend services.
             Based in Chennai, Tamil Nadu, India.
           </p>
+          {/* <p className="eyebrow">{"// systems that do the repetitive work for you."}</p> */}
           <div className="hero-actions">
             <a className="button ghost" href="#contact">
               Start a project
