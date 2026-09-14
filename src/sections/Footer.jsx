@@ -1,36 +1,34 @@
-﻿import Reveal from "../components/Reveal";
-import { Codex } from "@lobehub/icons";
+﻿import { useEffect, useState } from "react";
+
+const formatChennaiTime = (date) => new Intl.DateTimeFormat("en-GB", {
+  timeZone: "Asia/Kolkata",
+  hour: "2-digit",
+  minute: "2-digit",
+  second: "2-digit",
+  hour12: false,
+}).format(date);
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
+  const [now, setNow] = useState(() => new Date());
+  const currentYear = new Intl.DateTimeFormat("en", {
+    timeZone: "Asia/Kolkata",
+    year: "numeric",
+  }).format(now);
+
+  useEffect(() => {
+    const timer = window.setInterval(() => setNow(new Date()), 1000);
+    return () => window.clearInterval(timer);
+  }, []);
 
   return (
-    <Reveal
-      as="footer"
-      className="footer"
-      threshold={0.05}
-      rootMargin="0px 0px 0px 0px"
-    >
+    <footer className="footer" id="footer">
       <div className="footer-inner">
-        <div className="footer-brand">
-          <div className="footer-built">
-            <span>Built with</span>
-            <a
-              href="https://chatgpt.com/codex/"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Open Codex website"
-            >
-              <Codex.Avatar size={24} />
-            </a>
-          </div>
-          <p>© {currentYear} All rights reserved.</p>
-        </div>
-        <div className="footer-links">
-          <a href="#top" className="eyebrow">Go to top ^</a>
-        </div>
+        <p className="footer-name">©{currentYear}<br />Praveen Raj Sankar</p>
+
+        <p className="footer-location"><i aria-hidden="true" /> Chennai, IN</p>
+        <time className="footer-time" dateTime={now.toISOString()}>{formatChennaiTime(now)} IST</time>
       </div>
-    </Reveal>
+    </footer>
   );
 };
 

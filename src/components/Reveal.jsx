@@ -1,25 +1,25 @@
 import { useEffect, useRef, useState } from "react";
-import PropTypes from "prop-types";
 
 const Reveal = ({
   as: Tag = "div",
   className = "",
-  threshold = 0.2,
-  rootMargin = "0px 0px -10% 0px",
+  delay = 0,
+  threshold = 0.12,
+  rootMargin = "0px 0px -48px 0px",
   triggerOnce = true,
+  style,
   ...props
 }) => {
   const ref = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(
+    () => typeof window === "undefined" || typeof window.IntersectionObserver === "undefined"
+  );
 
   useEffect(() => {
     if (!ref.current) return;
-    if (typeof IntersectionObserver === "undefined") {
-      setIsVisible(true);
-      return;
-    }
+    if (typeof window.IntersectionObserver === "undefined") return;
 
-    const observer = new IntersectionObserver(
+    const observer = new window.IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
@@ -39,17 +39,10 @@ const Reveal = ({
     <Tag
       ref={ref}
       className={`reveal ${isVisible ? "is-visible" : ""} ${className}`}
+      style={{ ...style, "--reveal-delay": `${delay}ms` }}
       {...props}
     />
   );
 };
 
 export default Reveal;
-
-Reveal.propTypes = {
-  as: PropTypes.elementType,
-  className: PropTypes.string,
-  threshold: PropTypes.number,
-  rootMargin: PropTypes.string,
-  triggerOnce: PropTypes.bool,
-};

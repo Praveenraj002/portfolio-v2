@@ -1,38 +1,31 @@
 import Reveal from "../components/Reveal";
 
-const Contact = () => {
-  return (
-    <Reveal as="section" className="section contact" id="contact">
-      <div className="section-inner contact-inner">
-        <div>
-          <p className="eyebrow">Contact</p>
-          <h2>Have a problem worth solving? Let&apos;s talk.</h2>
-          <p className="mt-4">
-            If you have a product that needs clarity, an engineer who can take it from idea to production, or an idea that should feel more alive, I&apos;m here to help.
-          </p>
-        </div>
-        <div className="contact-card">
-          <p className="meta-label">Email (FOR COLLABORATION OR BUSINESS RELATED WORKS)</p> 
-          <a href="mailto:praveenrajslbusiness@gmail.com">
-            praveenrajslbusiness@gmail.com
-          </a>
-          <p className="meta-label">Email (FOR FULL TIME ROLES)</p>
-          <a href="mailto:reachpraveenrajsl@gmail.com">
-            reachpraveenrajsl@gmail.com
-          </a>
-          <p className="meta-label">Elsewhere</p>
-          <div className="contact-links">
-            <a href="https://www.linkedin.com/in/praveenraj002/">LinkedIn</a>
-            <a href="https://github.com/Praveenraj002">GitHub</a>
-            <a href="https://x.com/rajpraveen002">X</a>
-            <a href="https://www.instagram.com/praveenraj.webdev/">
-              Instagram
-            </a>
-          </div>
+const Contact = () => (
+  <section className="contact" id="contact">
+    <Reveal className="contact-inner" threshold={0.08}>
+      <p className="eyebrow">04 / Contact</p>
+      <div className="contact-prompt">
+        <h2>Have a system worth simplifying?</h2>
+        <a className="split-button" href="mailto:praveenrajslbusiness@gmail.com">
+          <span className="button-copy"><span>Start a project</span><span aria-hidden="true">Start a project</span></span>
+          <span className="button-arrow material-symbols-rounded" aria-hidden="true">arrow_forward</span>
+        </a>
+      </div>
+      <div className="contact-details">
+        <div><p>Projects &amp; consulting</p><a href="mailto:praveenrajslbusiness@gmail.com">praveenrajslbusiness@gmail.com</a></div>
+        <div><p>Full-time opportunities</p><a href="mailto:reachpraveenrajsl@gmail.com">reachpraveenrajsl@gmail.com</a></div>
+        <div className="contact-socials">
+          <p>Elsewhere</p>
+          <span>
+            <a href="https://www.linkedin.com/in/praveenraj002/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="https://github.com/Praveenraj002" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://x.com/rajpraveen002" target="_blank" rel="noreferrer">X</a>
+            <a href="https://www.instagram.com/praveenraj.webdev/" target="_blank" rel="noreferrer">Instagram</a>
+          </span>
         </div>
       </div>
     </Reveal>
-  );
-};
+  </section>
+);
 
 export default Contact;

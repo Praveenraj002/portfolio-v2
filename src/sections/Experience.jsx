@@ -5,20 +5,20 @@ import Reveal from "../components/Reveal";
 
 const Experience = () => {
   return (
-    <Reveal as="section" className="section experience" id="experience">
+    <section className="section experience" id="experience">
       <div className="section-inner">
-        <div className="experience-header">
+        <Reveal className="experience-header" threshold={0.08}>
           <div>
-            <p className="eyebrow">Experience</p>
-            <h2>Building Softwares with pragmatic engineering.</h2>
+            <p className="eyebrow">02 / Career</p>
+            <h2>Experience</h2>
           </div>
           <p>
-            Two roles focused on agentic systems, data platforms, and shipping
+            Three roles focused on agentic systems, data platforms, and shipping
             reliable AI workflows end-to-end.
           </p>
-        </div>
+        </Reveal>
         <div className="experience-list">
-          <article className="experience-card">
+          <Reveal as="article" className="experience-card" delay={40}>
             <div className="experience-top">
               <div className="experience-company">
                 <a
@@ -71,13 +71,13 @@ const Experience = () => {
                 90%.
               </li>
               <li>
-                Developed a Automated Code review service that uses AI to
-                analyze code quality+security, identify potential issues, and
-                provide feedbacks.
+                Developed an automated code review service that analyses code
+                quality and security, identifies potential issues, and provides
+                actionable feedback.
               </li>
             </ul>
-          </article>
-          <article className="experience-card">
+          </Reveal>
+          <Reveal as="article" className="experience-card" delay={70}>
             <div className="experience-top">
               <div className="experience-company">
                 <a
@@ -131,8 +131,8 @@ const Experience = () => {
                 on-time execution and peer enablement.
               </li>
             </ul>
-          </article>
-          <article className="experience-card">
+          </Reveal>
+          <Reveal as="article" className="experience-card" delay={70}>
             <div className="experience-top">
               <div className="experience-company">
                 <a
@@ -166,13 +166,13 @@ const Experience = () => {
             </div>
             <ul className="experience-points">
               <li>
-                Developed client-requested websites, translating requirements into functional, responsive web solutions using advanced front-end technologies aligned with the clients brand and business needs.
+                Developed responsive client websites, translating requirements into accessible front-end experiences aligned with each brand and its business goals.
               </li>
             </ul>
-          </article>
+          </Reveal>
         </div>
       </div>
-    </Reveal>
+    </section>
   );
 };
 

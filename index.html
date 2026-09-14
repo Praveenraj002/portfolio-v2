@@ -1,10 +1,21 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/src/assets/Pr-logo.png" />
+    <link rel="icon" type="image/png" href="/src/assets/Pr-logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Google Font -->
+    <meta name="description" content="Praveen Raj is a full-stack AI engineer building agentic systems, MCP tooling, and dependable backend products." />
+    <meta name="theme-color" content="#f4f6f8" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#090b0e" media="(prefers-color-scheme: dark)" />
+    <script>
+      try {
+        const savedTheme = localStorage.getItem("portfolio-theme");
+        const systemTheme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.dataset.theme = savedTheme === "dark" || savedTheme === "light" ? savedTheme : systemTheme;
+      } catch (_) {
+        document.documentElement.dataset.theme = "light";
+      }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
