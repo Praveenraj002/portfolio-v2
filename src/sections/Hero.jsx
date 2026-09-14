@@ -38,7 +38,13 @@ const Hero = () => {
   }, []);
 
   useEffect(() => {
-    if (!visitorName && !dialogRef.current?.open) dialogRef.current?.showModal();
+    if (visitorName) return;
+
+    const promptTimer = window.setTimeout(() => {
+      if (!dialogRef.current?.open) dialogRef.current?.showModal();
+    }, 1000);
+
+    return () => window.clearTimeout(promptTimer);
   }, [visitorName]);
 
   const openNameDialog = () => dialogRef.current?.showModal();
