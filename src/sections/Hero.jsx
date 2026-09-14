@@ -24,7 +24,7 @@ const getGreeting = (hour) => {
     return { title: "Good Evening", message: "Thanks for stopping by.", icon: "wb_twilight" };
   }
 
-  return { title: "Hey night owl", message: "Glad you found your way here.", icon: "dark_mode" };
+  return { title: "Hello", message: "Glad you found your way here.", icon: "dark_mode" };
 };
 
 const Hero = () => {

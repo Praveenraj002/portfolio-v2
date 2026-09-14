@@ -43,7 +43,7 @@ const Navbar = () => {
           <div className="nav-actions">
             <nav className="nav-links" aria-label="Primary navigation">
               {links.map(([label, href]) => <a key={href} href={href}>{label}</a>)}
-              <a className="nav-resume" href={ResumePdf} target="_blank" rel="noreferrer"><span className="nav-resume-icon material-symbols-rounded" aria-hidden="true">bolt</span> Resume</a>
+              <a href={ResumePdf} target="_blank" rel="noreferrer">Resume</a>
             </nav>
             <button className={"nav-toggle " + (isOpen ? "open" : "")} type="button" aria-label="Toggle navigation menu" aria-expanded={isOpen} aria-controls="mobile-nav" onClick={() => setIsOpen((open) => !open)}><span /><span /><span /></button>
           </div>
