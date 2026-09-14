@@ -1,5 +1,15 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Reveal from "../components/Reveal";
+
+const VISITOR_NAME_KEY = "portfolio-visitor-name";
+
+const getStoredVisitorName = () => {
+  try {
+    return window.localStorage.getItem(VISITOR_NAME_KEY)?.trim() || "";
+  } catch {
+    return "";
+  }
+};
 
 const getGreeting = (hour) => {
   if (hour >= 5 && hour < 12) {
@@ -14,16 +24,40 @@ const getGreeting = (hour) => {
     return { title: "Good Evening", message: "Thanks for stopping by.", icon: "wb_twilight" };
   }
 
-  return { title: "Hello, night owl", message: "Glad you found your way here.", icon: "dark_mode" };
+  return { title: "Hey night owl", message: "Glad you found your way here.", icon: "dark_mode" };
 };
 
 const Hero = () => {
   const [now, setNow] = useState(() => new Date());
+  const [visitorName, setVisitorName] = useState(getStoredVisitorName);
+  const dialogRef = useRef(null);
 
   useEffect(() => {
     const timer = window.setInterval(() => setNow(new Date()), 60_000);
     return () => window.clearInterval(timer);
   }, []);
+
+  useEffect(() => {
+    if (!visitorName && !dialogRef.current?.open) dialogRef.current?.showModal();
+  }, [visitorName]);
+
+  const openNameDialog = () => dialogRef.current?.showModal();
+
+  const saveVisitorName = (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    const name = String(formData.get("visitorName") || "").trim().replace(/\s+/g, " ");
+
+    if (!name) return;
+
+    setVisitorName(name);
+    try {
+      window.localStorage.setItem(VISITOR_NAME_KEY, name);
+    } catch {
+      // Personalization still works for the current page when storage is unavailable.
+    }
+    dialogRef.current?.close();
+  };
 
   const greeting = getGreeting(now.getHours());
 
@@ -33,7 +67,20 @@ const Hero = () => {
         <div className="hero-greeting">
           <span className="greeting-icon material-symbols-rounded" aria-hidden="true">{greeting.icon}</span>
           <div>
-            <p className="greeting-title">{greeting.title},</p>
+            <div className="greeting-heading-row">
+              <p className="greeting-title">
+                {greeting.title}{visitorName ? `, ${visitorName}` : ","}
+              </p>
+              <button
+                className="greeting-name-button material-symbols-rounded"
+                type="button"
+                aria-label={visitorName ? "Change your name" : "Add your name"}
+                title={visitorName ? "Change your name" : "Add your name"}
+                onClick={openNameDialog}
+              >
+                arrow_forward
+              </button>
+            </div>
             <p className="greeting-welcome">{greeting.message}</p>
           </div>
         </div>
@@ -69,6 +116,29 @@ const Hero = () => {
           </aside>
         </div>
       </div>
+
+      <dialog className="visitor-dialog" ref={dialogRef} aria-labelledby="visitor-dialog-title">
+        <form method="dialog" onSubmit={saveVisitorName}>
+          <p className="eyebrow">A quick hello</p>
+          <h2 id="visitor-dialog-title">What should I call you?</h2>
+          <p className="visitor-dialog-copy">Add your name to personalize your greeting.</p>
+          <label htmlFor="visitor-name">Your name</label>
+          <input
+            id="visitor-name"
+            name="visitorName"
+            type="text"
+            defaultValue={visitorName}
+            maxLength="30"
+            autoComplete="name"
+            autoFocus
+            required
+          />
+          <div className="visitor-dialog-actions">
+            <button type="button" className="visitor-skip" onClick={() => dialogRef.current?.close()}>Skip</button>
+            <button type="submit" className="visitor-save">Continue <span className="material-symbols-rounded" aria-hidden="true">arrow_forward</span></button>
+          </div>
+        </form>
+      </dialog>
     </Reveal>
   );
 };

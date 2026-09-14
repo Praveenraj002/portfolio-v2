@@ -88,7 +88,11 @@ ul, ol { margin: 0; }
 .hero-inner { width: var(--content); min-height: calc(100vh - 78px); margin-inline: auto; padding: 54px 0 88px; }
 .hero-greeting { min-height: 96px; display: flex; align-items: center; gap: 18px; }
 .greeting-icon { width: 58px; flex: 0 0 auto; color: var(--accent-blue); font-size: 47px; font-weight: 300; }
+.greeting-heading-row { display: flex; align-items: center; gap: 12px; }
 .greeting-title { font-size: clamp(25px, 1.8vw, 32px); font-weight: 600; line-height: 1.1; letter-spacing: -.035em; }
+.greeting-name-button { width: 42px; height: 42px; display: grid; place-items: center; flex: 0 0 auto; border-radius: 50%; background: var(--black); color: white; font-size: 21px; transition: color .35s ease, background-color .35s ease, transform .3s var(--spring); }
+.greeting-name-button:hover { background: var(--accent-blue); transform: rotate(-25deg); }
+.greeting-name-button:active { transform: scale(.94); }
 .greeting-welcome { margin-top: 8px; color: var(--secondary); font-size: var(--body-size); }
 .hero-divider { height: 1px; margin: 22px 0 52px; background: var(--line); }
 .hero-content { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(360px, .72fr); gap: clamp(60px, 8vw, 128px); align-items: start; }
@@ -101,6 +105,24 @@ ul, ol { margin: 0; }
 .hero-facts article::before { content: ""; position: absolute; top: 0; bottom: 0; left: 0; width: 4px; background: var(--accent-strong); transform: scaleY(0); transform-origin: bottom; transition: transform .35s var(--spring); }
 .hero-facts article > p { margin-bottom: 8px; color: var(--tertiary); font-size: var(--label-size); font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
 .hero-facts article > strong { display: block; font-size: var(--body-size); font-weight: 500; line-height: 1.5; }
+.visitor-dialog { width: min(520px, calc(100% - 32px)); padding: 0; border: 1px solid var(--line); border-radius: 28px; background: var(--surface); color: var(--black); box-shadow: 0 28px 90px rgb(16 17 20 / 24%); }
+.visitor-dialog::backdrop { background: rgb(9 11 14 / 48%); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+.visitor-dialog[open] { animation: dialog-in .35s var(--spring); }
+.visitor-dialog form { padding: 36px; }
+.visitor-dialog .eyebrow { margin-bottom: 16px; color: var(--accent-blue); }
+.visitor-dialog h2 { font-size: clamp(28px, 3vw, 40px); font-weight: 650; line-height: 1.05; letter-spacing: -.045em; }
+.visitor-dialog-copy { margin-top: 12px; color: var(--secondary); font-size: var(--body-size); }
+.visitor-dialog label { display: block; margin-top: 28px; font-size: var(--label-size); font-weight: 700; text-transform: uppercase; letter-spacing: .06em; }
+.visitor-dialog input { width: 100%; height: 56px; margin-top: 9px; padding: 0 16px; border: 1px solid var(--line); border-radius: 14px; outline: none; background: var(--canvas); color: var(--black); font-size: 18px; transition: border-color .2s ease, box-shadow .2s ease; }
+.visitor-dialog input:focus { border-color: var(--accent-blue); box-shadow: 0 0 0 4px rgb(10 102 216 / 12%); }
+.visitor-dialog-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 24px; }
+.visitor-dialog-actions button { min-height: 48px; padding: 0 19px; border-radius: 999px; font-weight: 650; }
+.visitor-skip { background: transparent; color: var(--secondary); }
+.visitor-skip:hover { background: var(--surface-soft); color: var(--black); }
+.visitor-save { display: inline-flex; align-items: center; gap: 8px; background: var(--black); color: white; }
+.visitor-save:hover { background: var(--accent-blue); }
+.visitor-save .material-symbols-rounded { font-size: 19px; }
+@keyframes dialog-in { from { opacity: 0; transform: translateY(14px) scale(.98); } }
 @media (hover: hover) {
   .hero-facts article:hover { border-color: rgb(10 102 216 / 22%); transform: translateY(-4px); box-shadow: var(--shadow-md); }
   .hero-facts article:hover::before { transform: scaleY(1); transform-origin: top; }
@@ -242,6 +264,14 @@ html[data-theme="dark"] .nav-links > a:hover { background: rgb(255 255 255 / 9%)
 html[data-theme="dark"] .nav-toggle { background: #f5f7fa; }
 html[data-theme="dark"] .nav-toggle span { background: var(--black); }
 html[data-theme="dark"] .hero-facts article { border-color: rgb(255 255 255 / 10%); }
+html[data-theme="dark"] .visitor-dialog { color: #f5f7fa; }
+html[data-theme="dark"] .visitor-dialog input { border-color: #3a424d; background: #090b0e; color: #f5f7fa; caret-color: var(--accent-strong); }
+html[data-theme="dark"] .visitor-dialog input::placeholder { color: var(--tertiary); }
+html[data-theme="dark"] .visitor-skip:hover { background: var(--surface-soft); color: #f5f7fa; }
+html[data-theme="dark"] .greeting-name-button,
+html[data-theme="dark"] .visitor-save { background: #f5f7fa; color: #101114; }
+html[data-theme="dark"] .greeting-name-button:hover,
+html[data-theme="dark"] .visitor-save:hover { background: var(--accent-strong); }
 html[data-theme="dark"] .hero .button-copy,
 html[data-theme="dark"] .hero .button-arrow { background: var(--accent-blue); }
 html[data-theme="dark"] .text-link { color: var(--accent-strong); }
@@ -348,6 +378,8 @@ body, .nav, .project-list, .experience, .about .section-inner, .contact, .footer
   .hero-greeting { min-height: 76px; gap: 11px; }
   .greeting-icon { width: 40px; font-size: 34px; }
   .greeting-title { font-size: 23px; line-height: 1.15; }
+  .greeting-heading-row { gap: 9px; }
+  .greeting-name-button { width: 38px; height: 38px; font-size: 19px; }
   .greeting-welcome { margin-top: 6px; font-size: 16px; line-height: 1.4; }
   .hero-divider { margin: 14px 0 28px; }
   .hero h1 { font-weight: 600; line-height: 1.14; letter-spacing: -.04em; }
@@ -362,6 +394,9 @@ body, .nav, .project-list, .experience, .about .section-inner, .contact, .footer
   .hero-facts article { padding: 18px 18px 20px; }
   .hero-facts article > p { font-size: 13px; }
   .hero-facts article > strong { font-size: 16px; }
+  .visitor-dialog form { padding: 28px 22px 22px; }
+  .visitor-dialog-actions { justify-content: stretch; }
+  .visitor-dialog-actions button { flex: 1; }
 }
 
 @media (max-width: 400px) {
