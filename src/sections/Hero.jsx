@@ -95,8 +95,9 @@ const Hero = () => {
 
         <div className="hero-content">
           <div className="hero-message">
-            <h1 id="hero-title">Building Intelligent systems that turn repetitive tasks into Autonomous AI workflows.</h1>
-            <p className="lead">Full-stack AI engineer specialising in thoughtful agentic systems, expressive interfaces, and robust backend services. Based in Chennai, Tamil Nadu, India.</p>
+            <p className="hero-kicker">FULL-STACK AI ENGINEERING · CHENNAI, INDIA</p>
+            <h1 id="hero-title">I build intelligent systems for <span>work that moves.</span></h1>
+            <p className="lead">Agentic workflows, expressive interfaces, and reliable backend services designed to make complex operations feel clear.</p>
             <div className="hero-actions">
               <a className="split-button" href="#projects">
                 <span className="button-copy"><span>View selected work</span><span aria-hidden="true">View selected work</span></span>
@@ -107,19 +108,11 @@ const Hero = () => {
           </div>
 
           <aside className="hero-facts" aria-label="Availability, focus, and tools">
-            <article>
-              <p>Availability</p>
-              <strong>Open to side projects and technical consultations. Not looking for full-time roles at this time.</strong>
-            </article>
-            <article>
-              <p>Focus</p>
-              <strong>Agentic AI systems, MCP tooling, robust backend development, and LLM fine-tuning.</strong>
-            </article>
-            <article>
-              <p>Tools</p>
-              <strong>Python, JavaScript, SQL, Pydantic AI, LangChain, LangGraph, FastMCP, FastAPI, RAG, Databricks, and AWS.</strong>
-            </article>
+            <article><p>Availability</p><strong>Open to side projects and technical consultations. Not looking for full-time roles at this time.</strong></article>
+            <article><p>Focus</p><strong>Agentic AI systems, MCP tooling, robust backend development, and LLM fine-tuning.</strong></article>
+            <article><p>Tools</p><strong>Python, JavaScript, SQL, Pydantic AI, LangChain, LangGraph, FastMCP, FastAPI, RAG, Databricks, and AWS.</strong></article>
           </aside>
+
         </div>
       </div>
 
