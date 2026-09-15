@@ -2,7 +2,7 @@ import Reveal from "../components/Reveal";
 
 const Contact = () => (
   <section className="contact" id="contact">
-    <Reveal className="contact-inner" threshold={0.08}>
+    <Reveal className="contact-inner reveal-stagger">
       <p className="eyebrow">04 / Contact</p>
       <div className="contact-prompt">
         <h2>Have a system worth simplifying?</h2>

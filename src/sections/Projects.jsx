@@ -1,3 +1,4 @@
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useState } from "react";
 import Reveal from "../components/Reveal";
 
@@ -22,7 +23,7 @@ const ProjectAction = ({ project }) => project.private ? (
 );
 
 const ProjectRow = ({ project, index }) => (
-  <Reveal as="article" className="project-row" threshold={0.08}>
+  <Reveal as="article" className="project-row" delay={(index % INITIAL_PROJECT_COUNT) * 80}>
     <p className="project-index">{String(index + 1).padStart(2, "0")}</p>
     <div className="project-main">
       <div className="project-heading">
@@ -42,6 +43,7 @@ const ProjectRow = ({ project, index }) => (
 
 const ProjectsSection = () => {
   const [showAll, setShowAll] = useState(false);
+  const shouldReduceMotion = useReducedMotion();
   const initialProjects = projects.slice(0, INITIAL_PROJECT_COUNT);
   const additionalProjects = projects.slice(INITIAL_PROJECT_COUNT);
   const visibleProjectCount = showAll ? projects.length : initialProjects.length;
@@ -49,30 +51,37 @@ const ProjectsSection = () => {
   return (
     <section className="section projects" id="projects">
       <div className="section-inner">
-        <Reveal className="section-heading" threshold={0.08}>
+        <Reveal className="section-heading">
           <p className="eyebrow">01 / Projects</p>
           <h2>Selected work</h2>
           <p>Production systems across agentic AI, enterprise data, and full-stack products.</p>
         </Reveal>
         <div className="project-list" id="project-list">
           {initialProjects.map((project, index) => <ProjectRow key={project.projectName} project={project} index={index} />)}
-          <div
-            className={`project-expand${showAll ? " open" : ""}`}
-            aria-hidden={!showAll}
-            inert={!showAll ? "" : undefined}
-          >
-            <div className="project-expand-inner">
-              {additionalProjects.map((project, index) => (
-                <ProjectRow
-                  key={project.projectName}
-                  project={project}
-                  index={index + INITIAL_PROJECT_COUNT}
-                />
-              ))}
-            </div>
-          </div>
+          <AnimatePresence initial={false}>
+            {showAll && (
+              <motion.div
+                className="project-expand-motion"
+                initial={shouldReduceMotion ? false : { height: 0, opacity: 0 }}
+                animate={{ height: "auto", opacity: 1 }}
+                exit={shouldReduceMotion ? { opacity: 0 } : { height: 0, opacity: 0 }}
+                transition={{ duration: shouldReduceMotion ? 0 : 0.3, ease: "easeInOut" }}
+                style={{ overflow: "hidden" }}
+                aria-hidden={!showAll}
+                inert={!showAll ? "" : undefined}
+              >
+                {additionalProjects.map((project, index) => (
+                  <ProjectRow
+                    key={project.projectName}
+                    project={project}
+                    index={index + INITIAL_PROJECT_COUNT}
+                  />
+                ))}
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
-        <Reveal className="projects-footer" threshold={0.08}>
+        <Reveal className="projects-footer">
           <p className="project-count">Showing {visibleProjectCount} of {projects.length} projects</p>
           {projects.length > INITIAL_PROJECT_COUNT && (
             <button

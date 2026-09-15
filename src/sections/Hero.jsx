@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { motion, useReducedMotion } from "framer-motion";
 import Reveal from "../components/Reveal";
 
 const VISITOR_NAME_KEY = "portfolio-visitor-name";
@@ -30,24 +31,33 @@ const getGreeting = (hour) => {
 const Hero = () => {
   const [now, setNow] = useState(() => new Date());
   const [visitorName, setVisitorName] = useState(getStoredVisitorName);
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
   const dialogRef = useRef(null);
+  const shouldReduceMotion = useReducedMotion();
 
   useEffect(() => {
     const timer = window.setInterval(() => setNow(new Date()), 60_000);
     return () => window.clearInterval(timer);
   }, []);
 
+  const openNameDialog = () => {
+    if (dialogRef.current?.open) return;
+    dialogRef.current.showModal();
+    setIsDialogOpen(true);
+    dialogRef.current.focus();
+  };
+
   useEffect(() => {
     if (visitorName) return;
 
     const promptTimer = window.setTimeout(() => {
-      if (!dialogRef.current?.open) dialogRef.current?.showModal();
+      openNameDialog();
     }, 1000);
 
     return () => window.clearTimeout(promptTimer);
   }, [visitorName]);
 
-  const openNameDialog = () => dialogRef.current?.showModal();
+  const closeNameDialog = () => setIsDialogOpen(false);
 
   const saveVisitorName = (event) => {
     event.preventDefault();
@@ -62,15 +72,15 @@ const Hero = () => {
     } catch {
       // Personalization still works for the current page when storage is unavailable.
     }
-    dialogRef.current?.close();
+    setIsDialogOpen(false);
   };
 
   const greeting = getGreeting(now.getHours());
 
   return (
-    <Reveal as="section" className="hero" id="home" aria-labelledby="hero-title" threshold={0.05}>
+    <Reveal as="section" className="hero" id="home" aria-labelledby="hero-title">
       <div className="hero-inner">
-        <div className="hero-greeting">
+        <div className="hero-greeting reveal-stagger">
           <span className="greeting-icon material-symbols-rounded" aria-hidden="true">{greeting.icon}</span>
           <div>
             <div className="greeting-heading-row">
@@ -93,11 +103,11 @@ const Hero = () => {
 
         <div className="hero-divider" aria-hidden="true" />
 
-        <div className="hero-content">
+        <div className="hero-content reveal-stagger">
           <div className="hero-message">
             <p className="hero-kicker">FULL-STACK AI ENGINEERING · CHENNAI, INDIA</p>
-            <h1 id="hero-title">I build intelligent systems for <span>work that moves.</span></h1>
-            <p className="lead">Agentic workflows, expressive interfaces, and reliable backend services designed to make complex operations feel clear.</p>
+            <h1 id="hero-title">I build Intelligent systems for <span>work that moves.</span></h1>
+            <p className="lead">Agentic workflows, MCP tooling, and reliable backend systems — automating the repeatable parts of complex operations, with a human in the loop where it counts</p>
             <div className="hero-actions">
               <a className="split-button" href="#projects">
                 <span className="button-copy"><span>View selected work</span><span aria-hidden="true">View selected work</span></span>
@@ -116,7 +126,15 @@ const Hero = () => {
         </div>
       </div>
 
-      <dialog className="visitor-dialog" ref={dialogRef} aria-labelledby="visitor-dialog-title">
+      <dialog className="visitor-dialog" ref={dialogRef} tabIndex="-1" aria-labelledby="visitor-dialog-title" onClose={() => setIsDialogOpen(false)}>
+        <motion.div
+          initial={false}
+          animate={isDialogOpen ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
+          transition={{ duration: shouldReduceMotion ? 0 : 0.2, ease: "easeOut" }}
+          onAnimationComplete={() => {
+            if (!isDialogOpen) dialogRef.current?.close();
+          }}
+        >
         <form method="dialog" onSubmit={saveVisitorName}>
           <p className="eyebrow">A quick hello</p>
           <h2 id="visitor-dialog-title">What should I call you?</h2>
@@ -129,14 +147,14 @@ const Hero = () => {
             defaultValue={visitorName}
             maxLength="30"
             autoComplete="name"
-            autoFocus
             required
           />
           <div className="visitor-dialog-actions">
-            <button type="button" className="visitor-skip" onClick={() => dialogRef.current?.close()}>Skip</button>
+            <button type="button" className="visitor-skip" onClick={closeNameDialog}>Skip</button>
             <button type="submit" className="visitor-save">Continue <span className="material-symbols-rounded" aria-hidden="true">arrow_forward</span></button>
           </div>
         </form>
+        </motion.div>
       </dialog>
     </Reveal>
   );

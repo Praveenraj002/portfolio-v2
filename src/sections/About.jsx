@@ -3,7 +3,7 @@ import Reveal from "../components/Reveal";
 const About = () => {
   return (
     <section className="section about" id="about">
-      <Reveal className="section-inner split" threshold={0.08}>
+      <Reveal className="section-inner split reveal-stagger">
         <div>
           <p className="eyebrow">03 / Profile</p>
           <h2>About me</h2>

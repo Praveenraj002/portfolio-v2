@@ -7,7 +7,7 @@ const Experience = () => {
   return (
     <section className="section experience" id="experience">
       <div className="section-inner">
-        <Reveal className="experience-header" threshold={0.08}>
+        <Reveal className="experience-header">
           <div>
             <p className="eyebrow">02 / Career</p>
             <h2>Experience</h2>
@@ -18,7 +18,7 @@ const Experience = () => {
           </p>
         </Reveal>
         <div className="experience-list">
-          <Reveal as="article" className="experience-card" delay={40}>
+          <Reveal as="article" className="experience-card" delay={0}>
             <div className="experience-top">
               <div className="experience-company">
                 <a
@@ -77,7 +77,7 @@ const Experience = () => {
               </li>
             </ul>
           </Reveal>
-          <Reveal as="article" className="experience-card" delay={70}>
+          <Reveal as="article" className="experience-card" delay={80}>
             <div className="experience-top">
               <div className="experience-company">
                 <a
@@ -132,7 +132,7 @@ const Experience = () => {
               </li>
             </ul>
           </Reveal>
-          <Reveal as="article" className="experience-card" delay={70}>
+          <Reveal as="article" className="experience-card" delay={160}>
             <div className="experience-top">
               <div className="experience-company">
                 <a

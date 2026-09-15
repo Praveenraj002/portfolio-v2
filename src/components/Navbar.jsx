@@ -17,6 +17,7 @@ const getInitialTheme = () => {
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const [theme, setTheme] = useState(getInitialTheme);
   const closeMenu = () => setIsOpen(false);
 
@@ -29,11 +30,18 @@ const Navbar = () => {
     }
   }, [theme]);
 
+  useEffect(() => {
+    const updateScrollState = () => setIsScrolled(window.scrollY > 12);
+    updateScrollState();
+    window.addEventListener("scroll", updateScrollState, { passive: true });
+    return () => window.removeEventListener("scroll", updateScrollState);
+  }, []);
+
   const toggleTheme = () => setTheme((current) => current === "light" ? "dark" : "light");
   const nextTheme = theme === "light" ? "dark" : "light";
 
   return (
-    <header className="nav">
+    <header className={`nav${isScrolled ? " scrolled" : ""}`}>
       <div className="nav-shell">
         <div className="nav-inner">
           <a className="nav-logo" href="#top" aria-label="Praveen Raj home">

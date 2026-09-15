@@ -7,10 +7,12 @@ import About from "./sections/About";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
 import AmbientField from "./components/AmbientField";
+import { MotionConfig } from "framer-motion";
 
 function App() {
   return (
-    <div className="app-shell">
+    <MotionConfig reducedMotion="user">
+      <div className="app-shell">
       <AmbientField />
       <div id="top" />
       <Navbar />
@@ -23,7 +25,8 @@ function App() {
         <Contact />
       </main>
       <Footer />
-    </div>
+      </div>
+    </MotionConfig>
   );
 }
 
