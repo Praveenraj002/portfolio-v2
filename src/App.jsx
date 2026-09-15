@@ -6,10 +6,12 @@ import Experience from "./sections/Experience";
 import About from "./sections/About";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
+import AmbientField from "./components/AmbientField";
 
 function App() {
   return (
     <div className="app-shell">
+      <AmbientField />
       <div id="top" />
       <Navbar />
       <main>

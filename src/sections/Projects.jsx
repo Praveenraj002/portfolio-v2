@@ -87,7 +87,6 @@ const ProjectsSection = () => {
                 <span>Show less</span>
               </span>
               <span className="sr-only">{showAll ? "Show less" : "Show all"}</span>
-              <span className="material-symbols-rounded" aria-hidden="true">south</span>
             </button>
           )}
         </Reveal>

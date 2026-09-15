@@ -1,15 +1,15 @@
 const competencies = [
-  "Agentic AI",
+  "Agent Construction",
+  "Application System Design",
   "MCP Tooling",
+  "Data Ingestion",
   "LLM Fine-tuning",
   "RAG Systems",
-  "Python",
-  "FastAPI",
-  "Pydantic AI",
-  "LangGraph",
-  "React",
-  "AWS",
-  "Data Platforms",
+  "Data Modeling",
+  "Generative AI solutions",
+  "Knowledge Engineering",
+  "Data Quality Engineering",
+  "Model serving anbd deloyment",
   "Backend Engineering",
 ];
 

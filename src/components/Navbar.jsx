@@ -38,7 +38,7 @@ const Navbar = () => {
         <div className="nav-inner">
           <a className="nav-logo" href="#top" aria-label="Praveen Raj home">
             <img src={BrandLogo} alt="" />
-            <span>praveee.</span>
+            {/* <span>praveee.</span> */}
           </a>
           <div className="nav-actions">
             <nav className="nav-links" aria-label="Primary navigation">

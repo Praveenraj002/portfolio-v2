@@ -95,14 +95,14 @@ const Hero = () => {
 
         <div className="hero-content">
           <div className="hero-message">
-            <h1 id="hero-title">Building intelligent systems that turn repetitive tasks into autonomous AI workflows.</h1>
+            <h1 id="hero-title">Building Intelligent systems that turn repetitive tasks into Autonomous AI workflows.</h1>
             <p className="lead">Full-stack AI engineer specialising in thoughtful agentic systems, expressive interfaces, and robust backend services. Based in Chennai, Tamil Nadu, India.</p>
             <div className="hero-actions">
               <a className="split-button" href="#projects">
                 <span className="button-copy"><span>View selected work</span><span aria-hidden="true">View selected work</span></span>
                 <span className="button-arrow material-symbols-rounded" aria-hidden="true">arrow_forward</span>
               </a>
-              <a className="text-link" href="#contact">Start a conversation <span className="material-symbols-rounded" aria-hidden="true">north_east</span></a>
+              <a className="text-link" href="#contact">Say Hello <span className="material-symbols-rounded" aria-hidden="true">north_east</span></a>
             </div>
           </div>
 
@@ -117,7 +117,7 @@ const Hero = () => {
             </article>
             <article>
               <p>Tools</p>
-              <strong>Python, JavaScript, SQL, Pydantic AI, LangChain, LangGraph, FastMCP, FastAPI, RAG, and AWS.</strong>
+              <strong>Python, JavaScript, SQL, Pydantic AI, LangChain, LangGraph, FastMCP, FastAPI, RAG, Databricks, and AWS.</strong>
             </article>
           </aside>
         </div>
