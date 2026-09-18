@@ -10,7 +10,7 @@ const About = () => {
         </div>
         <div className="about-body">
           <p>
-            I&apos;m a software engineer who builds things that think. My focus sits at the intersection of AI systems, backend infrastructure, and the kind of engineering that makes complex operations feel effortless to the people using them.
+            My name is Praveen Raj Sankar. I&apos;m a software engineer who builds things that think. My focus sits at the intersection of AI systems, backend infrastructure, and the kind of engineering that makes complex operations feel effortless to the people using them.
           </p>
           <p>
             Beyond my full-time work, I build focused systems that help people
