@@ -1,4 +1,5 @@
 import Reveal from "../components/Reveal";
+import Icon from "../components/Icon";
 
 const Contact = () => (
   <section className="contact" id="contact">
@@ -8,7 +9,7 @@ const Contact = () => (
         <h2>Have a system worth simplifying?</h2>
         <a className="split-button" href="mailto:praveenrajslbusiness@gmail.com">
           <span className="button-copy"><span>Start a project</span><span aria-hidden="true">Start a project</span></span>
-          <span className="button-arrow material-symbols-rounded" aria-hidden="true">arrow_forward</span>
+          <Icon className="button-arrow" name="arrow_forward" />
         </a>
       </div>
       <div className="contact-details">

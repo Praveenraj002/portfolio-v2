@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import ResumePdf from "../assets/Resume/praveenraj-resume.pdf";
 import BrandLogo from "../assets/Images/Pr-logo.png";
+import Icon from "./Icon";
 
 const links = [["Home", "#top"], ["Projects", "#projects"], ["Experience", "#experience"], ["About", "#about"], ["Contact", "#contact"]];
 
@@ -56,7 +57,7 @@ const Navbar = () => {
             <button className={"nav-toggle " + (isOpen ? "open" : "")} type="button" aria-label="Toggle navigation menu" aria-expanded={isOpen} aria-controls="mobile-nav" onClick={() => setIsOpen((open) => !open)}><span /><span /><span /></button>
           </div>
             <button className="theme-toggle" type="button" aria-label={`Switch to ${nextTheme} mode`} title={`Switch to ${nextTheme} mode`} onClick={toggleTheme}>
-              <span className="material-symbols-rounded" aria-hidden="true">{theme === "light" ? "dark_mode" : "light_mode"}</span>
+              <Icon name={theme === "light" ? "dark_mode" : "light_mode"} />
             </button>
         </div>
         <nav id="mobile-nav" className={"nav-mobile " + (isOpen ? "open" : "")} aria-label="Mobile navigation" aria-hidden={!isOpen} inert={!isOpen ? "" : undefined}>

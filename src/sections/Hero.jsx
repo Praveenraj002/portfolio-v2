@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import Reveal from "../components/Reveal";
+import Icon from "../components/Icon";
 
 const VISITOR_NAME_KEY = "portfolio-visitor-name";
 
@@ -81,20 +82,20 @@ const Hero = () => {
     <Reveal as="section" className="hero" id="home" aria-labelledby="hero-title">
       <div className="hero-inner">
         <div className="hero-greeting reveal-stagger">
-          <span className="greeting-icon material-symbols-rounded" aria-hidden="true">{greeting.icon}</span>
+          <Icon className="greeting-icon" name={greeting.icon} />
           <div>
             <div className="greeting-heading-row">
               <p className="greeting-title">
                 {greeting.title}{visitorName ? `, ${visitorName}` : ","}
               </p>
               <button
-                className="greeting-name-button material-symbols-rounded"
+                className="greeting-name-button"
                 type="button"
                 aria-label={visitorName ? "Change your name" : "Add your name"}
                 title={visitorName ? "Change your name" : "Add your name"}
                 onClick={openNameDialog}
               >
-                arrow_forward
+                <Icon name="arrow_forward" />
               </button>
             </div>
             <p className="greeting-welcome">{greeting.message}</p>
@@ -111,9 +112,9 @@ const Hero = () => {
             <div className="hero-actions">
               <a className="split-button" href="#projects">
                 <span className="button-copy"><span>View selected work</span><span aria-hidden="true">View selected work</span></span>
-                <span className="button-arrow material-symbols-rounded" aria-hidden="true">arrow_forward</span>
+                <Icon className="button-arrow" name="arrow_forward" />
               </a>
-              <a className="text-link" href="#contact">Say Hello <span className="material-symbols-rounded" aria-hidden="true">north_east</span></a>
+              <a className="text-link" href="#contact">Say Hello <Icon name="north_east" /></a>
             </div>
           </div>
 
@@ -151,7 +152,7 @@ const Hero = () => {
           />
           <div className="visitor-dialog-actions">
             <button type="button" className="visitor-skip" onClick={closeNameDialog}>Skip</button>
-            <button type="submit" className="visitor-save">Continue <span className="material-symbols-rounded" aria-hidden="true">arrow_forward</span></button>
+            <button type="submit" className="visitor-save">Continue <Icon name="arrow_forward" /></button>
           </div>
         </form>
         </motion.div>

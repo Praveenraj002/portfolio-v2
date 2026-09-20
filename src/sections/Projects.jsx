@@ -1,6 +1,7 @@
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useState } from "react";
 import Reveal from "../components/Reveal";
+import Icon from "../components/Icon";
 
 const projects = [
   { projectName: "Claude Code Review Service", projectDescription: "An AI service using the Claude Agent SDK to analyse code quality and security, identify issues, and return actionable feedback—reducing review time by 70%.", techStacks: ["Agentic AI", "Claude Agent SDK", "Azure DevOps", "Python"], year: "2026", projectType: "Company", role: "AI Engineer", private: true },
@@ -14,11 +15,11 @@ const projects = [
 const INITIAL_PROJECT_COUNT = 4;
 
 const ProjectAction = ({ project }) => project.private ? (
-  <span className="project-action private"><span className="material-symbols-rounded" aria-hidden="true">lock</span><span>Private work</span></span>
+  <span className="project-action private"><Icon name="lock" /><span>Private work</span></span>
 ) : (
   <span className="project-action-group">
-    <a href={project.demo} target="_blank" rel="noreferrer">Visit <span className="material-symbols-rounded" aria-hidden="true">north_east</span></a>
-    <a href={project.code} target="_blank" rel="noreferrer">Code <span className="material-symbols-rounded" aria-hidden="true">code</span></a>
+    <a href={project.demo} target="_blank" rel="noreferrer">Visit <Icon name="north_east" /></a>
+    <a href={project.code} target="_blank" rel="noreferrer">Code <Icon name="code" /></a>
   </span>
 );
 
